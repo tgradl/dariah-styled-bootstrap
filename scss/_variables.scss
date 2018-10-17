@@ -35,16 +35,16 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$blue:    #213365 !default;
+$indigo:  #494e7d !default;
+$purple:  #727299 !default;
+$pink:    #e83e8c !default; // Bootstrap default
+$red:     #652122 !default;
+$orange:  #655321 !default; 
+$yellow:  #ffc107 !default; // Bootstrap default
+$green:   #446521 !default;
+$teal:    #20c997 !default; // Bootstrap default
+$cyan:    #17a2b8 !default; // Bootstrap default
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -68,6 +68,8 @@ $colors: map-merge(
 );
 
 $primary:       $blue !default;
+$primary-var-1: $purple !default;
+$primary-var-2: $indigo !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -251,14 +253,14 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      Roboto, Arial, Helvetica, sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
-$font-size-sm:                ($font-size-base * .875) !default;
+$font-size-sm:                ($font-size-base * 0.875) !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -269,18 +271,43 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base * 1.5 !default;
+$h2-font-size:                $font-size-base * 1.25 !default;
+$h3-font-size:                $font-size-base !default;
+$h4-font-size:                $font-size-base * 0.875 !default; // CAPS
+$h5-font-size:                $font-size-base * 0.875 !default; // CAPS
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      ($spacer / 2) !default;
-$headings-font-family:        inherit !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
+$headings-margin-bottom:      ($spacer * 0.875) !default;
+$headings-font-family:        MuseoSansRounded, Arial, Helvetica, sans-serif !default;
+$headings-font-weight:        normal !default;
+$headings-line-height:        inherit !default;
+$headings-color:              $primary !default;
+
+// TGR: Heading variations on each level in SGT
+$h1-color:	              $headings-color !default;
+$h2-color:	              $primary-var-1 !default;
+$h3-color:	              $primary-var-2 !default;
+$h4-color:	              $gray-600 !default;
+$h5-color:	              $gray-600 !default;
+$h6-color:	              $gray-600 !default;
+
+$h1-font-family:              $headings-font-family !default;
+$h2-font-family:              $headings-font-family !default;
+
+$h3-transform:	              uppercase !default;
+$h4-transform:	              uppercase !default;
+$h5-transform:	              uppercase !default;
+
+$h2-line-height:              1.2 !default;
+
+$h1-margin:                   0 0 ($headings-margin-bottom * 1.75) 0 !default;
+$h2-margin:                   ($headings-margin-bottom * 1.75) 0 $headings-margin-bottom 0 !default;
+$h3-margin:                   ($headings-margin-bottom * 1.75) 0 $headings-margin-bottom 0 !default;
+$h4-margin:                   ($headings-margin-bottom * 1.75) 0 $headings-margin-bottom 0 !default;
+$h5-margin:                   $headings-margin-bottom 0 $headings-margin-bottom 0 !default;
+$h6-margin:                   $headings-margin-bottom 0 0 0 !default;
+
 
 $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
@@ -688,8 +715,8 @@ $navbar-toggler-padding-x:          .75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
-$navbar-dark-color:                 rgba($white, .5) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
+$navbar-dark-color:                 $white !default;
+$navbar-dark-hover-color:           $white !default;
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
