@@ -1,3 +1,7 @@
+# Ignore compilation files
+.sass-cache
+build
+
 # Ignore docs files
 _gh_pages
 _site
