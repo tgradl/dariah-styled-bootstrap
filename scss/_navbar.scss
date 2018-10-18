@@ -72,7 +72,33 @@
 
   .dropdown-menu {
     position: static;
-    float: none;
+    float: left;
+    // TODO: Does not work properly, destroys menu in collapsed
+    /*visibility: hidden;
+    opacity: 0;*/
+
+	.dropdown-header {
+	  position: relative;
+	  padding: 12px 12px 12px 48px;
+
+	  .nav-icon {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		width: 48px;
+		text-align: center;
+		font-size: 26px;
+	  }
+	}
+
+	.dropdown-item {
+	  padding: 12px;
+	  margin-left: 36px;
+	  width: auto;
+	}
+
+
   }
 }
 
@@ -160,11 +186,45 @@
 
           .dropdown-menu {
             position: absolute;
-          }
+			margin-top: 0;
+            border: none;
+            // TODO: Does not work properly, destroys menu in collapsed
+            /*-webkit-transition: opacity .2s,visibility .2s;
+            transition: opacity .2s,visibility .2s;*/
+            -webkit-box-shadow: $navbar-dark-dropdown-box-shadow;
+            box-shadow: $navbar-dark-dropdown-box-shadow;
+            @include border-radius(0);
 
+            // TODO: Does not work properly, destroys menu in collapsed
+            /*&.show {
+              visibility: visible;
+              opacity: 1; 
+            }*/
+
+            padding: 12px;
+
+            .dropdown-menu-block {
+              display: table-cell;
+              position: relative;
+              padding: 0 8px;
+
+              + .dropdown-menu-block::before {
+				border-left: 1px solid rgba(0,0,0,.12);
+			 	border-right: 1px solid hsla(0,0%,100%,.12);
+				content: "";
+				height: 100%;
+				margin: 0 0 0 -1px;
+				position: absolute;
+				width: 0;
+				left: 0;
+			  }
+            }
+          }
           .nav-link {
             padding-right: $navbar-nav-link-padding-x;
             padding-left: $navbar-nav-link-padding-x;
+            padding-top: $navbar-nav-link-padding-y;
+            padding-bottom: $navbar-nav-link-padding-y;
           }
         }
 
@@ -210,6 +270,7 @@
 
       @include hover-focus {
         color: $navbar-light-hover-color;
+		background-color: $navbar-light-hover-bg-color;
       }
 
       &.disabled {
@@ -262,12 +323,40 @@
 
       @include hover-focus {
         color: $navbar-dark-hover-color;
+		background-color: $navbar-dark-hover-bg-color;
       }
 
       &.disabled {
         color: $navbar-dark-disabled-color;
       }
+
+      &[aria-expanded='true'] {
+		background-color: $navbar-dark-dropdown-bg-color;
+      }
     }
+
+    .dropdown-menu {
+	  background-color: $navbar-dark-dropdown-bg-color;
+	  color: $navbar-dark-color;
+
+	  .dropdown-header {
+		color: $navbar-dark-color;
+		font-size: $h2-font-size;
+		line-height: $h2-line-height;
+		font-family: $headings-font-family;
+	  }
+
+	  a {
+		color: $navbar-dark-color;
+		text-decoration: none;
+
+		@include hover-focus {
+		  color: inherit;
+		  background-color: $navbar-dark-hover-bg-color;
+		}
+
+	  }
+	}
 
     .show > .nav-link,
     .active > .nav-link,
