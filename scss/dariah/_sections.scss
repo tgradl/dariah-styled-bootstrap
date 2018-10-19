@@ -1,5 +1,13 @@
+main {
+	margin-bottom: 20px;
+}
+
+/*
+ *	footer based on DARIAH-DE/StyleGuideTemplate
+ *	@see: https://github.com/DARIAH-DE/StyleGuideTemplate/blob/styleguide_v2/scss/sections/footer.scss
+ */
 .footer {
-	background: $footer-bg-color url(../../images/grain.png);
+	background: $footer-bg-color url(../../img/grain.png);
 	color: $footer-color;
 	font-size: $footer-font-size;
 	margin-top: auto;
@@ -13,9 +21,14 @@
 	p {
 		max-width: none;
 	}
+
+	small {
+      font-size: .875em;
+      line-height: 16px;
+	}
 }
 
-.footer_left {
+.footer-left {
 	float: left;
 	width: 61.8%;
 
@@ -27,9 +40,9 @@
 	a {
 		border-color: transparent;
 
-		/*@include hover {
+		@include hover {
 			border-bottom: $border-width solid $link-hover-color;
-		}*/
+		}
 	}
 
 	a + a {
@@ -41,7 +54,7 @@
 	}
 }
 
-.footer_right {
+.footer-right {
 	float: right;
 	text-align: right;
 	width: 38.2%;
@@ -52,14 +65,21 @@
 		width: 100%;
 	}
 
+	p {
+		text-align: right;
+		@media (max-width: $footer-breakpoint) {
+			text-align: center;
+		}
+	}
+
 	// BMBF logo
 	a {
 		@include transition(background);
-		border: 0;
-		/*border-radius: $br;*/
-		float: right;
 		margin: (-$grid-gutter-width / 4) 0;
 		padding: ($grid-gutter-width / 4);
+
+		border: none;
+		display: inline-block;
 
 		@media (max-width: $footer-breakpoint) {
 			display: inline-block;

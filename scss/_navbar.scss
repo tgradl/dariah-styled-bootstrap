@@ -94,9 +94,14 @@
 
 	.dropdown-item {
 	  padding: 12px;
-	  margin-left: 36px;
 	  width: auto;
 	}
+
+  .dropdown-menu-block {
+    .dropdown-item {
+      margin-left: 36px;
+    }
+  }
 
 
   }

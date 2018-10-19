@@ -196,13 +196,15 @@ sup { top: -.5em; }
 //
 // Links
 //
-
 a {
+  @include transition(border, color);
+  border-bottom: $border-width solid $border-color;
   color: $link-color;
   text-decoration: $link-decoration;
-  background-color: transparent; // Remove the gray background on active links in IE 10.
+  word-wrap: break-word; // 1
 
   @include hover {
+    border-color: $link-hover-color;
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
   }

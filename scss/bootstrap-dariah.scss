@@ -1,12 +1,15 @@
 /*!
  * Bootstrap DARIAH-DE customization *
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap is licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * The DARIAH-DE customization is as well: https://github.com/tgradl/dariah-styled-bootstrap/blob/dariah-v4-dev/LICENSE
  * Based on DARIAH-DE Styleguide Template: https://github.com/DARIAH-DE/StyleGuideTemplate/
  */
-
 @import "functions";
 @import "variables";
 @import "mixins";
 @import "dariah/_variables";
 @import "dariah/_reboot";
-@import "dariah/_footer";
+@import "dariah/_common";
+@import "dariah/_navbar";
+@import "dariah/_logobar";
+@import "dariah/_sections";

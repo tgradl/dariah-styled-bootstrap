@@ -1,0 +1,96 @@
+/*
+ *	logobar based on DARIAH-DE/StyleGuideTemplate
+ *	@see: https://github.com/DARIAH-DE/StyleGuideTemplate/blob/styleguide_v2/scss/sections/logo.scss
+ */
+.logobar {
+	font-size: ($grid-gutter-width * 2); // TODO: Why does this help removing the bottom gap?
+	margin: 0 auto !important;
+	text-align: center;
+
+	a {
+		border: 0;
+	}
+
+
+	.logobar-link {
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0 $grid-gutter-width;
+		position: relative;
+		z-index: 1;
+
+		// 1. Center logo visually
+		.logobar-logo {
+			display: block;
+			pointer-events: none; // Allow click-trough on spike
+			position: relative;
+			
+			&.logobar-spike {
+				fill: #fff;
+				margin: 0 $grid-gutter-width;
+				position: absolute;
+				top: 0;
+				left: 0;
+				stroke: #fff;
+				z-index: -1;
+			}
+		}
+
+		&.logobar-link-sm {
+			height: ($grid-gutter-width * 2);
+
+			// Paint over logo tagline
+			&::after {
+				background: #fff;
+				bottom: -17px;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 20px;
+				position: absolute;
+			}
+
+			.logobar-logo {
+				height: ($grid-gutter-width * 3);
+				left: -10px; // 1
+				margin: -6px 0 0;
+				width: 151px; // IE 11
+			
+				&.logobar-spike {
+					stroke-width: 18px;
+					top: -4px;
+					left: 14px;
+				}
+			}
+		}
+
+		&:not(.logobar-link-sm) {
+
+			.logobar-logo {
+				height: ($grid-gutter-width * 6);
+				left: -23px; // 1
+				margin: -9px 0 0;
+				width: 303px; // IE 11
+
+				@media (max-width: $footer-breakpoint) {
+					height: ($grid-gutter-width * 4.5);
+					left: -17px;
+					margin: (-$grid-gutter-width / 4) 0 (-$grid-gutter-width / 2);
+					width: 227px; // IE 11
+				}
+
+				&.logobar-spike {
+					stroke-width: 12px;
+					top: -8px;
+					left: 1px;
+
+					@media (max-width: $footer-breakpoint) {
+						stroke-width: 18px;
+						top: -5px;
+						left: 7px;
+					}
+				}
+			}
+		}
+	}
+}
