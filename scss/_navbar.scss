@@ -67,12 +67,13 @@
 
   .nav-link {
     padding-right: 0;
-    padding-left: 0;
+    padding-left: ($grid-gutter-width / 2);
   }
 
   .dropdown-menu {
     position: static;
     float: left;
+    border: none;
     // TODO: Does not work properly, destroys menu in collapsed
     /*visibility: hidden;
     opacity: 0;*/
@@ -138,7 +139,9 @@
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  font-family: $navbar-toggler-font-family;
   font-size: $navbar-toggler-font-size;
+  text-transform: uppercase;
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
@@ -275,7 +278,7 @@
 
       @include hover-focus {
         color: $navbar-light-hover-color;
-		background-color: $navbar-light-hover-bg-color;
+		    background-color: $navbar-light-hover-bg-color;
       }
 
       &.disabled {
@@ -322,13 +325,20 @@
     }
   }
 
+  .collapse {
+      &.show {
+        background-color: $navbar-dark-dropdown-bg-color;
+      }
+    }
+
   .navbar-nav {
+
     .nav-link {
       color: $navbar-dark-color;
 
       @include hover-focus {
         color: $navbar-dark-hover-color;
-		background-color: $navbar-dark-hover-bg-color;
+		    background-color: $navbar-dark-hover-bg-color;
       }
 
       &.disabled {
@@ -336,30 +346,29 @@
       }
 
       &[aria-expanded='true'] {
-		background-color: $navbar-dark-dropdown-bg-color;
+		    background-color: $navbar-dark-dropdown-bg-color;
       }
     }
 
     .dropdown-menu {
-	  background-color: $navbar-dark-dropdown-bg-color;
-	  color: $navbar-dark-color;
+	    background-color: $navbar-dark-dropdown-bg-color;
+	    color: $navbar-dark-color;
 
-	  .dropdown-header {
-		color: $navbar-dark-color;
-		font-size: $h2-font-size;
-		line-height: $h2-line-height;
-		font-family: $headings-font-family;
-	  }
+	    .dropdown-header {
+        color: $navbar-dark-color;
+		    font-size: $h2-font-size;
+		    line-height: $h2-line-height;
+		    font-family: $headings-font-family;
+	    }
 
-	  a {
-		color: $navbar-dark-color;
-		text-decoration: none;
+	    a {
+		    color: $navbar-dark-color;
+		    text-decoration: none;
 
-		@include hover-focus {
-		  color: inherit;
-		  background-color: $navbar-dark-hover-bg-color;
-		}
-
+		    @include hover-focus {
+		      color: inherit;
+		      background-color: $navbar-dark-hover-bg-color;
+		  }
 	  }
 	}
 

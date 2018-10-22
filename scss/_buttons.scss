@@ -6,8 +6,11 @@
 
 .btn {
   display: inline-block;
+  font-family: $btn-font-family;
   font-weight: $btn-font-weight;
+  text-transform: $btn-text-transform;
   color: $body-color;
+  letter-spacing: .5px;
   text-align: center;
   vertical-align: middle;
   user-select: none;
