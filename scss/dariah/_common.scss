@@ -5,3 +5,47 @@
 	color: $color;
   }
 }
+
+.figcaption {
+  font-size: $code-font-size;
+}
+
+blockquote {
+    background: $tint-06;
+    border-radius: 2px;
+    color: $gray-600;
+    font-style: italic;
+    padding: $grid-gutter-width / 2;
+    position: relative;
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.18);
+	max-width: 720px;
+	margin: 0 auto ($grid-gutter-width/2);
+
+	> footer {
+		font-size: $code-font-size;
+		font-style: normal;
+		text-align: right;
+	}
+}
+
+caption {
+    color: $gray-600;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: $grid-gutter-width;
+    margin: $grid-gutter-width auto ($grid-gutter-width / 2);
+    margin-top: $grid-gutter-width;
+    text-transform: uppercase;
+    margin-top: 0;
+    text-align: left;
+    caption-side: top;
+}
+
+dd + dt {
+    margin-top: $grid-gutter-width;
+}
+
+dt {
+    color: $gray-600;
+}

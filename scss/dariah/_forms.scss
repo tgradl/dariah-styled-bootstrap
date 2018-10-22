@@ -1,0 +1,23 @@
+label:not(.sr-only), legend {
+    color: $gray-600;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+legend {
+    letter-spacing: 1px;
+    line-height: $grid-gutter-width;
+    margin: $grid-gutter-width auto ($grid-gutter-width/2);
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+legend {
+    padding: 0;
+}
+
+fieldset, legend {
+    border: 0;
+}

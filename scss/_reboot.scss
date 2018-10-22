@@ -154,7 +154,7 @@ dt {
 
 dd {
   margin-bottom: .5rem;
-  margin-left: 0; // Undo browser default
+  margin-left: 2rem; // Undo browser default
 }
 
 blockquote {
@@ -240,7 +240,6 @@ code,
 kbd,
 samp {
   font-family: $font-family-monospace;
-  font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }
 
 pre {
@@ -412,7 +411,7 @@ fieldset {
 
 // 1. Correct the text wrapping in Edge and IE.
 // 2. Correct the color inheritance from `fieldset` elements in IE.
-legend {
+/*legend {
   display: block;
   width: 100%;
   max-width: 100%; // 1
@@ -423,7 +422,7 @@ legend {
   color: inherit; // 2
   white-space: normal; // 1
 }
-
+*/
 progress {
   vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
 }
