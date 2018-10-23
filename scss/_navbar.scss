@@ -80,7 +80,7 @@
 
 	.dropdown-header {
 	  position: relative;
-	  padding: 12px 12px 12px 48px;
+	  padding: ($grid-gutter-width / 2);
 
 	  .nav-icon {
 		display: block;
@@ -99,8 +99,14 @@
 	}
 
   .dropdown-menu-block {
-    .dropdown-item {
-      margin-left: 36px;
+
+    &.block-with-icon {
+      .dropdown-item {
+        margin-left: 36px;
+      }
+      .dropdown-header {
+        padding-left: 48px;
+      }
     }
   }
 
