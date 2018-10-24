@@ -1,10 +1,13 @@
 main {
 	margin-bottom: 20px;
-	position: relative;
-	
+
 	.btn {
 		min-width: 135px;
 	}
+}
+
+header {
+	z-index: 10000;
 }
 
 /*
