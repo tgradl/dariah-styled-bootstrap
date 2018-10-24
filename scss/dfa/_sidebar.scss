@@ -21,28 +21,3 @@
 	    margin-right: -20px;
 	}
 }
-
-#collapse-panel-trigger {
-	position: fixed;
-	right: 0px;
-	top: 45%;
-	width: 20px;
-	height: 75px;
-	color: #FFFFFF;
-	
-	background-image: linear-gradient(to bottom, #213365 0px, #213365 100%);
-    background-repeat: repeat-x;
-    
-	border-radius: 5px 0 0 5px;
-
-	text-align:	center;
-	cursor: pointer;
-	padding-top: 25px;
-	z-index: 100;
-}
-
-#collapse-panel-trigger:hover, 
-#collapse-panel-trigger:focus {
-    background-color: #5d5773;
-    background-position: 0 -15px;
-}
