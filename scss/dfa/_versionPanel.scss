@@ -1,0 +1,57 @@
+.version-panel {
+	overflow-y: scroll;
+	min-height: 365px;
+	border: $border-width solid $border-color;
+	border-radius: $border-radius;
+
+	.card {
+		border-radius: 0;
+		border: none;
+		border-bottom: $border-width solid $border-color;
+
+		.card-heading {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: ($grid-gutter-width / 2);
+			margin-left: -33px;
+		
+			.card-icon {
+				padding: 0 ($grid-gutter-width / 4);
+				vertical-align: middle;
+
+				a {
+					border-bottom: none;
+					@include hover-focus {
+						text-decoration: none;
+					}
+				}
+			}
+
+			.card-title {
+				margin: auto;
+			}
+		}
+
+		&.version-deleted  {
+			.card-text {
+				color: $danger;
+			}
+		}
+
+		&.version-draft  {
+			.card-text {
+				color: $warning;
+			}
+		}
+
+		&.version-published  {
+			.card-text {
+				color: $info;
+			}
+		}
+
+		.card-body {
+			padding-left: ($grid-gutter-width * 2);
+		}
+	}
+}

@@ -1,0 +1,48 @@
+/*!
+ *	Side navigation
+ */
+.sidebar {
+	float: right;
+	margin-top: 100px;
+
+	.list-group {
+	
+		border: $border-width solid $border-color;
+		
+		margin-bottom: ($grid-gutter-width / 2);
+		
+		/*margin: -35px -20px 0 auto;*/
+		width: 285px;
+		
+		border-radius: $border-radius;
+	    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    margin-right: -20px;
+	}
+}
+
+#collapse-panel-trigger {
+	position: fixed;
+	right: 0px;
+	top: 45%;
+	width: 20px;
+	height: 75px;
+	color: #FFFFFF;
+	
+	background-image: linear-gradient(to bottom, #213365 0px, #213365 100%);
+    background-repeat: repeat-x;
+    
+	border-radius: 5px 0 0 5px;
+
+	text-align:	center;
+	cursor: pointer;
+	padding-top: 25px;
+	z-index: 100;
+}
+
+#collapse-panel-trigger:hover, 
+#collapse-panel-trigger:focus {
+    background-color: #5d5773;
+    background-position: 0 -15px;
+}
