@@ -3,21 +3,48 @@
  */
 .sidebar {
 	float: right;
-	margin-top: 100px;
+	margin-top: 10px;
+	overflow-y: auto;
 
-	.list-group {
-	
+	.sidebar-block {
+		background-color: $white;
 		border: $border-width solid $border-color;
 		
 		margin-bottom: ($grid-gutter-width / 2);
+		padding: 0 $grid-gutter-width;
 		
 		/*margin: -35px -20px 0 auto;*/
-		width: 285px;
+		//width: 285px;
 		
 		border-radius: $border-radius;
+
+
+
 	    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	    padding-top: 10px;
+	    /*padding-top: 10px;
 	    padding-bottom: 10px;
-	    margin-right: -20px;
+	    margin-right: -20px;*/
+
+	    a {
+	    	border: none;
+	    	/*color: $body-color;*/
+	    	font-size: 90%;
+	    }
+
+ 		h2 {
+	    	margin: ($grid-gutter-width) 0;
+	    }
+
+	    h3 {
+	    	margin-top: ($grid-gutter-width / 2);
+	    	margin-bottom: ($grid-gutter-width / 4);
+	    	margin-left: 0.5rem;
+	    }
+
+	    ul {
+	    	list-style-type: none;
+	    	padding-left: 1rem;
+	    	margin-left: 0.5rem;
+	    }
 	}
 }

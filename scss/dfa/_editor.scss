@@ -1,0 +1,38 @@
+.editor {
+	.editor-buttonbar {
+		padding: ($grid-gutter-width / 2) 0;
+		background-color: $white;
+		border-bottom: $border-width solid $border-color;
+	}
+
+	.editor-section {
+		border: $border-width solid $border-color;
+		-webkit-box-shadow: $box-shadow-sm;
+		box-shadow: $box-shadow-sm;
+		padding: $grid-gutter-width ($grid-gutter-width / 2);
+		margin-bottom: ($grid-gutter-width );
+
+
+		.editor-section-heading h2 {
+			margin-top: 0;
+			text-align: center;
+			border-bottom: $border-width solid $border-color;
+			padding-bottom: ($grid-gutter-width / 2);
+		}
+
+		.form-group {
+			margin-bottom: 0;
+		}
+
+		.col-form-label {
+			text-align: right;
+		
+			&.col-content-label {
+				text-align: left;
+				font-size: 1rem;
+				font-weight: $font-weight-base;	
+			}
+		}
+
+	}
+}
