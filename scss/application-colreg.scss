@@ -4,10 +4,13 @@
 @import "functions";
 @import "variables";
 
-@import "dfa/variables";
+@import "bs-dariah/variables";
+
 @import "dfa/mixins";
 @import "dfa/sections";
 @import "dfa/versionPanel";
 @import "dfa/dataTables";
 @import "dfa/sidebar";
 @import "dfa/editor";
+@import "dfa/editorTable";
+@import "dfa/editorList";

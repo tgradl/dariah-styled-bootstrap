@@ -1,0 +1,62 @@
+.editor-table {
+    //border-collapse: collapse;
+    border-bottom: $border-width solid $editor-table-border-color;
+    //margin-bottom: calc(0.875rem + 1px);
+    width: 100%;
+
+    tr {
+    	td, th {
+		    border: $border-width solid $editor-table-border-color;
+		    padding: ($grid-gutter-width / 4) ($grid-gutter-width / 2);
+		    text-align: left;
+
+		    &.nowrap {
+				white-space: nowrap;
+			}
+
+			&.explode {
+				width: 100%;
+			} 
+		}
+
+		th {
+		    /*padding-top: 8px;
+		    padding-bottom: 8px;*/
+		    background-color: $editor-table-head-bg-color;
+		    color: white;
+		}
+
+    	&.list {
+			cursor: pointer;
+
+			&.has-error {
+				background-color: $warning;
+
+				&:hover {
+					background-color: darken($warning, 15%);
+				}
+			}
+
+			&:hover {
+				background-color: lighten($editor-table-head-bg-color, 35%);
+			}
+		}
+
+		&:nth-child(2n+1) td { 
+			//border-bottom: 0;
+		}
+		&:nth-child(2n+2) td { 
+			//border-top: $border-width dashed $editor-table-border-color;
+		}
+    }
+
+    .row-open {
+		background-color: lighten($editor-table-head-bg-color, 45%) !important;
+		font-weight: $font-weight-bold;
+	}
+}
+
+.editor-buttons {
+	float: right;
+	//margin-top: 5px;
+}

@@ -3,14 +3,15 @@
 		padding: ($grid-gutter-width / 2) 0;
 		background-color: $white;
 		border-bottom: $border-width solid $border-color;
+		text-align: right;
 	}
-
-	.editor-section {
+ 
+ 	.editor-section {
 		border: $border-width solid $border-color;
 		-webkit-box-shadow: $box-shadow-sm;
 		box-shadow: $box-shadow-sm;
 		padding: $grid-gutter-width ($grid-gutter-width / 2);
-		margin-bottom: ($grid-gutter-width );
+		margin-bottom: ($grid-gutter-width);
 
 
 		.editor-section-heading h2 {
@@ -21,7 +22,7 @@
 		}
 
 		.form-group {
-			margin-bottom: 0;
+			//margin-bottom: 0;
 		}
 
 		.col-form-label {
@@ -32,7 +33,49 @@
 				font-size: 1rem;
 				font-weight: $font-weight-base;	
 			}
+
+			&.linked-control-label a {
+				color: $labels-color;
+				border: none;
+
+				@include hover-focus {
+					color: $labels-highlight-color;
+				}
+			}
 		}
 
+	}
+
+	.attribute-name-helper {
+		display: none;
+		position: absolute; 
+		height: 0;
+		width: 0;
+	}
+
+	.collection-image-container,
+	.agent-image-container {
+		float: left;
+	    margin: 5px;
+	    border: 1px solid #DDD;
+	    padding: 5px;
+	    position: relative;
+	    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	    -webkit-border-radius: 5px;
+	    border-radius: 5px;
+	}
+
+	#collection-image-placeholder {
+		margin: 10px;
+	}
+
+	#btn-remove-collection-image {
+		padding-top: 10px;
+	}
+
+	#collection-image-hint {
+		font-style: italic;
+		font-weight: normal;
 	}
 }

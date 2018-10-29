@@ -2,13 +2,15 @@ main {
 	margin-bottom: 20px;
 
 	.btn {
-		min-width: 135px;
+		&:not(.btn-link) {
+			min-width: 135px;
+	}
 	}
 }
 
-header {
+/*header {
 	z-index: 10000;
-}
+}*/
 
 /*
  *	footer based on DARIAH-DE/StyleGuideTemplate
@@ -21,6 +23,7 @@ header {
 	margin-top: auto;
 	padding: ($grid-gutter-width / 2) $grid-gutter-width;
 	/*text-shadow: $outset-shadow;*/
+	z-index: 1021; //over fixed sidebar
 
 	@media (max-width: $footer-breakpoint) {
 		padding: ($grid-gutter-width / 2);

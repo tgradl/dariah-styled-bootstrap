@@ -5,3 +5,13 @@ $footer-color:		$gray-900 !default;
 $footer-font-size:	$font-size-sm !default;
 
 $footer-breakpoint:	map-get($grid-breakpoints, "md");
+
+
+// Colors
+
+$labels-color:				$gray-600;
+$labels-highlight-color:	darken($labels-color, 15%) !default;
+
+
+$editor-table-head-bg-color:	$primary-var-2;
+$editor-table-border-color:		$editor-table-head-bg-color;

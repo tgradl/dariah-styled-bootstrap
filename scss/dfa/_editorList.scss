@@ -1,0 +1,35 @@
+.editor-list {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+
+
+
+	li {
+
+		+.editor-list-buttons {
+			.btn {
+				padding-top: 0;
+			}
+		}
+		
+		.editor-list-item,
+		.editor-list-buttons {
+			/*margin-left: -15px;
+		    margin-right: -15px;
+		    clear: both;*/
+		}
+
+		.editor-list-input {
+			/*padding-right: 2px;*/
+		}
+
+		.editor-list-item-buttons {
+			white-space: nowrap;
+			/*float: left !important;*/
+			//padding-top: 3px;
+		}
+	}
+
+	
+}
