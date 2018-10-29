@@ -1,0 +1,32 @@
+/*!
+ *	Typeahead
+ */
+.twitter-typeahead {
+	width: 100%;
+
+    .tt-hint {
+        color: $gray-600;
+    }
+
+    .tt-menu {
+        width: 100%;
+        background-color: $primary-var-2;
+        color: $white;
+        border: $border-width solid $input-border-color;
+        border-bottom-right-radius: $input-border-radius;
+        border-bottom-left-radius: $input-border-radius;
+
+        .tt-suggestion,
+        .tt-empty-message {
+            padding: ($grid-gutter-width / 2) ($grid-gutter-width / 2);
+            margin: 0;
+        }
+
+        .tt-suggestion {
+            &:hover {
+                background-color: $primary-var-1;
+                cursor: pointer;
+            }
+        }
+    }
+}
