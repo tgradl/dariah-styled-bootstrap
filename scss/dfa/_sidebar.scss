@@ -59,6 +59,15 @@
 					 content: " ";
 					 border-left: 5px solid $body-color;
 	    		}
+
+	    		&.has-error a {
+	    			color: $danger;
+	    			font-weight: $font-weight-bold;
+
+	    			@include hover-focus {
+						color: darken($danger, 15%);
+					}
+	    		}
 	    	}
 	    }
 	}

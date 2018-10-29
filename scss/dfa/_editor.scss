@@ -78,4 +78,15 @@
 		font-style: italic;
 		font-weight: normal;
 	}
+
+	.container-error {
+		&:first-of-type(label) {
+			color: $warning;
+		}
+	}
+
+	.alert {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
 }
