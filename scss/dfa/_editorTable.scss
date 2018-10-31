@@ -7,7 +7,7 @@
     tr {
     	td, th {
 		    border: $border-width solid $editor-table-border-color;
-		    padding: ($grid-gutter-width / 4) ($grid-gutter-width / 2);
+		    padding: $grid-gutter-width / 2;
 		    text-align: left;
 
 		    &.nowrap {
@@ -43,9 +43,12 @@
 			}
 
 			&.row-open {
-				background-color: lighten($editor-table-head-bg-color, 45%);
 				font-weight: $font-weight-bold;
 			}
+		}
+
+		&.row-open {
+			background-color: lighten($editor-table-head-bg-color, 45%);
 		}
 
 		&:nth-child(2n+1) td { 
@@ -55,6 +58,10 @@
 			//border-top: $border-width dashed $editor-table-border-color;
 		}
 
+		.btn-link {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 		
     }
 
