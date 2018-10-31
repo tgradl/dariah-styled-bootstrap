@@ -49,3 +49,9 @@ dd + dt {
 dt {
     color: $gray-600;
 }
+
+.hide {
+    display: none;
+    visibility: hidden;
+    height: 0;
+}

@@ -1,0 +1,15 @@
+.card {
+	.card-title {
+		margin-top: 0;
+	}
+}
+
+
+// Styles for cards
+//	@see: alerts
+//
+@each $color, $value in $theme-colors {
+  .card-#{$color} {
+    @include alert-variant(theme-color-level($color, $card-bg-level), theme-color-level($color, $card-border-level), theme-color-level($color, $card-color-level));
+  }
+}

@@ -2,9 +2,9 @@ main {
 	margin-bottom: 20px;
 
 	.btn {
-		&:not(.btn-link) {
+		&:not(.btn-link):not(.btn-inline) {
 			min-width: 135px;
-	}
+		}
 	}
 }
 
