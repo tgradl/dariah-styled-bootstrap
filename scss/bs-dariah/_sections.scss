@@ -8,9 +8,16 @@ main {
 	}
 }
 
-/*header {
-	z-index: 10000;
-}*/
+header {
+	z-index: 1021;
+}
+
+.vbox-overlay {
+	a {
+		border: none;
+	}
+}
+
 
 /*
  *	footer based on DARIAH-DE/StyleGuideTemplate
