@@ -14,7 +14,8 @@
 		margin-bottom: ($grid-gutter-width);
 
 
-		.editor-section-heading h2 {
+		.editor-section-heading h2,
+		> h2 {
 			margin-top: 0;
 			text-align: center;
 			border-bottom: $border-width solid $border-color;
@@ -26,8 +27,22 @@
 		}
 
 		.col-form-label {
-			text-align: right;
-		
+			hyphens: auto;
+			hyphenate-limit-chars: auto 3;
+			hyphenate-limit-lines: 4;
+			-webkit-hyphens: auto;
+			-webkit-hyphenate-limit-chars: auto 3;
+			-webkit-hyphenate-limit-lines: 4;
+			-ms-hyphens: auto;
+			-ms-hyphenate-limit-chars: auto 3;
+			-ms-hyphenate-limit-lines: 4;
+
+			// TODO: Use grid variable...
+			//@media (min-width: ${grid-breakpoints.sm}) {
+			@media (min-width: 876px) {
+				text-align: right;
+			}
+
 			&.col-content-label {
 				text-align: left;
 				font-size: 1rem;

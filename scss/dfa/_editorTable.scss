@@ -1,8 +1,22 @@
+.editor-table-container {
+	overflow-x: auto;
+}
+
 .editor-table {
     //border-collapse: collapse;
-    border-bottom: $border-width solid $editor-table-border-color;
+    display: none;
+
+    //border-bottom: $border-width solid $editor-table-border-color;
     margin-bottom: 0.5rem;
     width: 100%;
+
+    &.has-data {
+    	display: block;
+
+    	 + .btn {
+	    	padding-top: 0;
+	    }
+    }
 
     tr {
     	td, th {
@@ -64,11 +78,5 @@
 		}
 		
     }
-
-    
-    + .btn {
-    	padding-top: 0;
-    }
-
 }
 
