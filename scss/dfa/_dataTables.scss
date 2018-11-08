@@ -10,65 +10,101 @@
 }
 
 .dataTable {
-	tbody {
-		td {
-			/* Fill to cell size: https://stackoverflow.com/a/15801081 */
-			overflow: hidden;
-			padding: ($grid-gutter-width / 4);
 
-			a {
-				border-bottom: none;
-				display: block;
-				margin: -10em;
-			    padding: 10em;
-			}
-
-			&.td-no-wrap {
-				white-space: nowrap;
-			}
-
-			&.td-center {
-				text-align: center;
-			}
-
-			&.td-image {
-				width: 90px;
-
-				// Actual preview image
-				img {
-					margin: 0 auto;
-					border: $border-width solid $border-color;
-				}
-
-				// No-image-placeholder
-				.list-thumb-nopreview {
-				  position: relative;
-				  width: 100%;
-				  height: 75px;
-				  min-width: 100px;
-				  background: url(../../img/page_icon_faded.png) top center no-repeat;
-
-				  span {
-					position: absolute;
-					bottom: 2px;
-					right: 2px;
-					left: 2px;
-					background: rgba($primary-var-1, .7);
-					border: $border-width solid $primary-var-1; 
-					border-radius: $border-radius-sm;
-					padding: ($grid-gutter-width / 6);
-					color: white;
-					margin: 0;
-					font-size: $font-size-sm;
-					font-family: $headings-font-family;
-				  }
-
-				  a {
-					color: $white;
-				  }
-				}
+	&.table-hovering {
+		> tbody {
+			> tr {
+				&:hover {
+					> td {
+						background-color: $primary-var-2;
+						a {
+							color: $white;
+						}
+					}
+				}	
 			}
 		}
 	}
 
+	> tbody {
+
+		> tr {
+
+			&.selected {
+				background-color: $primary-var-1;
+				color: $white;
+
+				:hover {
+					background-color: lighten($primary-var-1, 10%);
+				}
+
+				a, .btn-inline, .btn-link {
+					color: $white;
+
+					@include hover-focus {
+						color: $gray-500;
+					}
+				}
+			}
+
+			> td {
+				/* Fill to cell size: https://stackoverflow.com/a/15801081 */
+				overflow: hidden;
+				padding: ($grid-gutter-width / 4);
+
+				a {
+					border-bottom: none;
+					display: block;
+					margin: -10em;
+				    padding: 10em;
+				}
+
+				&.td-no-wrap {
+					white-space: nowrap;
+				}
+
+				&.td-center {
+					text-align: center;
+				}
+
+				&.td-image {
+					width: 90px;
+
+					// Actual preview image
+					img {
+						margin: 0 auto;
+						border: $border-width solid $border-color;
+					}
+
+					// No-image-placeholder
+					.list-thumb-nopreview {
+					  position: relative;
+					  width: 100%;
+					  height: 75px;
+					  min-width: 100px;
+					  background: url(../../img/page_icon_faded.png) top center no-repeat;
+
+					  span {
+						position: absolute;
+						bottom: 2px;
+						right: 2px;
+						left: 2px;
+						background: rgba($primary-var-1, .7);
+						border: $border-width solid $primary-var-1; 
+						border-radius: $border-radius-sm;
+						padding: ($grid-gutter-width / 6);
+						color: white;
+						margin: 0;
+						font-size: $font-size-sm;
+						font-family: $headings-font-family;
+					  }
+
+					  a {
+						color: $white;
+					  }
+					}
+				}
+			}
+		}
+	}
 }
