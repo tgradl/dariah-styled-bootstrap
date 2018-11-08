@@ -4,9 +4,12 @@
 @import "functions";
 @import "variables";
 
-@import "bs-dariah/variables";
+@import "dariah/variables";
 
 @import "dfa/mixins";
 @import "dfa/dataTables";
 @import "dfa/sidebar";
 @import "dfa/modal";
+
+@import "dme/editorLayout";
+@import "dme/modelEditor";
