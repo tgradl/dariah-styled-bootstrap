@@ -8,12 +8,12 @@
 
 
 $layout-bg-color:                 none;
-$layout-border-color:             $border-color;
+$layout-border-color:             $primary-var-2;//$border-color;
 $layout-border-width:             $border-width;
 $layout-box-shadow:               $box-shadow-sm;
 
-$layout-content-bg-color:         $gray-100;
-$layout-content-active-bg-color:  lighten($primary-var-2, 40%);
+$layout-content-active-bg-color:  $gray-100;
+$layout-content-bg-color:         $gray-300;
 
 $layout-drop-border-color:        $primary;
 $layout-drop-bg-color:            $primary-var-1; // Appears 4 times
@@ -80,7 +80,7 @@ $layout-splitter-hover-color:     $primary;
     color: $layout-tab-inactive-color;
     text-transform: $h3-transform;
     font-weight: $headings-font-weight;
-    height: 18px !important;
+    height: 21px !important;
 
     background: $layout-content-bg-color;
     margin-right: 2px;
@@ -113,6 +113,7 @@ $layout-splitter-hover-color:     $primary;
       border-bottom: none;
       //box-shadow: $layout-box-shadow;
       padding-bottom: 5px;
+      height: 22px !important;
 
       .lm_close_tab {
         opacity: 1;
@@ -200,6 +201,10 @@ $layout-splitter-hover-color:     $primary;
     background-image: url('../../img/fa-icons/solid/thumbtack.svg');
     transform:rotate(-45deg);
     transition:transform 300ms;
+  }
+
+  .lm_tabdropdown {
+    background-image: url('../../img/fa-icons/solid/caret-down.svg');
   }
 }
 

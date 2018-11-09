@@ -1,0 +1,193 @@
+/*!
+ * Log Area
+ */
+.log {
+	padding-left: 0;
+	list-style-type: none;
+	white-space: nowrap;
+	font-family: $font-family-monospace;
+	font-size: $code-font-size;
+	color: $code-color;
+
+	li {
+
+		&.log-INFO {
+			background-color: $info;
+			color: $white;
+		}
+
+		&.log-SUCCESS {
+			background-color: $success;
+			color: $white;
+		}
+
+		&.log-WARNING {
+			background-color: $warning;
+		}
+
+		&.log-ERROR {
+			background-color: $danger;
+			color: $white;
+		}
+	}
+}
+
+
+div.content-pane {
+	overflow: auto;
+	
+	&.content-pane-no-overflow {
+		overflow: hidden;
+	}
+}
+
+/*!
+ * Editor context menu
+ * @see: https://github.com/avxto/nuContextMenu/blob/master/src/nu-context-menu.css
+ */
+.editor-context-menu {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    z-index: 9999;
+
+    &.active {
+	    opacity: 1;
+	    height: auto;
+	    width: auto;
+	}
+
+	ul {
+	    font-size: $font-size-sm;
+	    list-style: none;
+	    margin: 2px 0 0;
+	    padding: 4px 0;
+	    text-align: left;
+
+	    li {
+		    clear: both;
+		    color: $body-color;
+		    cursor: pointer;
+		    //line-height: 1.42857;
+		    padding: 2px 20px;
+		    white-space: nowrap;
+
+		    &:hover {
+			    background: $primary-var-1;
+			    color: $white;
+			}
+		}
+
+		hr {
+		    background: $border-color;
+		    border: 0;
+		    color: $border-color;
+		    height: 1px;
+		    margin: 4px 0;
+		}
+	}
+}
+
+
+
+.editor-sample-container {
+	padding-top: 10px;
+}
+
+.ui-layout-pane.editor-sample-pane {
+	background: transparent url("../img/loader.gif") center center no-repeat;
+}
+
+.editor-sample-pane .ui-pane-subcontainer,
+.editor-sample-container {
+	background: #FFF;
+}
+
+.sample-textarea {
+	font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	font-size: 90%;
+	resize: none;
+	min-height: 100px;
+	min-width: 100px;
+	margin-bottom: 0px;
+	
+	border: 1px solid #DDD;
+	border-top: none;
+	
+	background-color: #F8F8F8;
+	
+	/* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+  	-webkit-border-radius: 0; 	
+  	/* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+    border-radius: 0;
+	
+	box-shadow: none;
+}
+
+#sample-output-container,
+#sample-input-container {
+	border: 1px solid #DDD;
+	border-top: none;
+}
+
+#sample-input-container textarea {
+	border: none;
+}
+
+#sample-output-container .button-bar {
+	text-align: right;
+	padding-top: 10px;
+}
+
+.sample-output-resource, 
+.sample-transformed-resource {
+	font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+	font-size: 90%;
+	overflow: auto;
+	background-color: #F8F8F8;
+	padding: 6px 12px;
+	min-height: 100px;
+}
+
+
+.sample-output-resource ul,
+.sample-transformed-resource ul {
+	padding-left: 20px;
+	list-style-type: none;
+	text-indent: -1.5em;
+}
+
+.sample-output-key {
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+.schema-metadata-label,
+.schema-metadata-data {
+	font-size: 90%;
+	padding: 0 4px;
+}
+
+.schema-metadata-data h4 {
+	margin-top: 20px;
+}
+
+.schema-metadata-label {
+	font-weight: bold;
+	text-align: right;
+}
+
+.sample-output-counter {
+    font-size: 95%;
+    padding: 10px;
+}
