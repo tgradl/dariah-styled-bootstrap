@@ -10,9 +10,10 @@ div.content-pane {
 	}
 
 	.editor-content-container {
+		min-height: 0;
 
 		+ .editor-content-container {
-			margin-top: $grid-gutter-width / 2;
+			margin-top: $grid-gutter-width / 4;
 		}
 	}
 }
@@ -108,7 +109,8 @@ div.content-pane {
 	}
 }
 
-.sample-codearea, .sample-textarea {
+.sample-codearea, 
+.sample-textarea {
 	font-family: $font-family-monospace;
 	background-color: $code-bg;
 	color: $code-color;
@@ -118,8 +120,7 @@ div.content-pane {
 	padding: $grid-gutter-width/2;
 
 	&.sample-codearea {
-		overflow-x: hidden;
-		overflow-y: auto;
+		overflow: auto;
 	
 		p {
 			padding: 0;
@@ -128,6 +129,59 @@ div.content-pane {
 	
 	&.sample-textarea {
 		resize: none;
+	}
+
+	ul {
+		padding-left: 15px;
+		list-style-type: none;
+
+		li {
+			position: relative;
+			margin-top: 0.2rem;
+
+			&:before{
+				content: " ";
+				display: inline-block;
+				position: absolute;
+				left: -1.25rem;
+				top: 0.25rem;
+				width: 0;
+				height: 0;
+				margin-right: 3px;
+				margin-left: 8px;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid $gray-800;
+			 }
+
+			.btn-inline {
+				padding: 0 0.5rem;
+			}
+			
+			.sample-output-value-expanded {
+				.fa-plus-square {
+					display: none;
+				}
+				.fa-minus-square {
+					display: inline;
+				}
+			}
+			
+			.sample-output-value-collapsed {
+				.fa-plus-square {
+					display: inline;
+				}
+				.fa-minus-square {
+					display: none;
+				}
+			}
+
+		}
+
+		.sample-output-key {
+			font-style: italic;
+			font-weight: bold;
+		}
 	}
 }
 
