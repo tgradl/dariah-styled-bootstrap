@@ -108,6 +108,14 @@ $layout-splitter-hover-color:     $primary;
       }
     }
 
+    .resultCounter {
+      position: absolute;
+      right: -7px;
+      top: -5px;
+      z-index: 4;
+      box-shadow: $box-shadow-sm;
+    }
+
     // If Tab is active, so if it's in foreground
     &.lm_active {
       border-bottom: none;
