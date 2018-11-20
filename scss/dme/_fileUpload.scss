@@ -3,43 +3,46 @@
  */
  .fileupload-buttonbar {
     overflow: hidden;
+
+    .fileinput-button {
+        float: left;
+        margin-right: 4px;
+        overflow: hidden;
+        position: relative;
+
+        input {
+            cursor: pointer;
+            direction: ltr;
+            font-size: 23px;
+            margin: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(-300px, 0px) scale(4);
+        }
+    }
 }
 
-.fileinput-button {
-    float: left;
-    margin-right: 4px;
-    overflow: hidden;
-    position: relative;
+.fileupload-progress {
+    padding-top: 14px;
+    
+    .progress {
+        height: 1.5rem;
+        font-size: 0.9rem;
+    }
 }
-.fileinput-button input {
-    cursor: pointer;
-    direction: ltr;
-    font-size: 23px;
-    margin: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(-300px, 0px) scale(4);
-}
-* html .fileinput-button {
-    line-height: 24px;
-    margin: 1px -3px 0 0;
-}
-* + html .fileinput-button {
-    margin: 1px 0 0;
-    padding: 2px 15px;
-}
-.fileupload-file {
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    clear: both;
-    float: left;
-    margin: 10px 10px 10px 0;
-    padding: 10px;
-}
-.fileupload-file .fileupload-file-info {
-}
-.fileupload-file .fileupload-file-buttonbar {
-    text-align: left;
+
+.fileupload-files {
+    overflow: auto;
+
+    > table {
+        > tr {
+            border: none;
+            
+            > td {
+                padding: 0;
+            }
+        }
+    }
 }
