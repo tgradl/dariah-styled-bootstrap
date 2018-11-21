@@ -3,7 +3,7 @@
  */
 div.content-pane {
 	overflow: auto;
-	padding-top: $grid-gutter-width/2;
+	//padding-top: $grid-gutter-width/2;
 
 	&.content-pane-no-overflow {
 		overflow: hidden;
@@ -30,25 +30,27 @@ div.content-pane {
 	font-size: $code-font-size;
 	color: $code-color;
 
+	padding: 5px 10px;
+
 	li {
-
-		&.log-INFO {
-			background-color: $info;
-			color: $white;
+		.log-type {
+			font-weight: $font-weight-bold;
 		}
 
-		&.log-SUCCESS {
-			background-color: $success;
-			color: $white;
+		&.log-INFO .log-type {
+			color: $info;
 		}
 
-		&.log-WARNING {
-			background-color: $warning;
+		&.log-SUCCESS .log-type {
+			color: $success;
 		}
 
-		&.log-ERROR {
-			background-color: $danger;
-			color: $white;
+		&.log-WARNING .log-type {
+			color: darken($warning, 15%);
+		}
+
+		&.log-ERROR .log-type {
+			color: $danger;
 		}
 	}
 }
