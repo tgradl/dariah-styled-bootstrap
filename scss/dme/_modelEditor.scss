@@ -11,9 +11,10 @@ div.content-pane {
 
 	.editor-content-container {
 		min-height: 0;
+		padding: 1rem;
 
 		+ .editor-content-container {
-			margin-top: $grid-gutter-width / 4;
+			padding-top: 0.5rem;
 		}
 	}
 }
@@ -94,6 +95,10 @@ div.content-pane {
 		    //line-height: 1.42857;
 		    padding: 2px 20px;
 		    white-space: nowrap;
+
+			i.fas, i.far {
+				width: 25px
+			}
 
 		    &:hover {
 			    background: $primary-var-1;

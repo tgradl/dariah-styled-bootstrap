@@ -1,0 +1,19 @@
+/*!
+ *	Activity history
+ */
+#activity-history {
+    .card {
+        /*width: 160px; */
+        //display: block-inline;
+        float: left;
+        overflow-x: auto;
+        margin-bottom: 0.25rem;
+        margin-right: 0.25rem;
+        //color: $white;
+
+        .card-body {
+            padding: 10px 15px;
+
+        }
+    }
+}
