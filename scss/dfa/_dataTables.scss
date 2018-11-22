@@ -14,12 +14,24 @@
 	&.table-hovering {
 		> tbody {
 			> tr {
+				position: relative;
 				&:hover {
 					> td {
 						background-color: $primary-var-2;
 						a {
 							color: $white;
 						}
+					}
+					&::after {
+						display: inline-block;
+						position: absolute;
+						right: 0.75rem;
+						top: 50%;
+						margin-top: -12px;
+						font-family: $fa-font-family;
+						font-weight: $fa-font-weight-regular;
+   						content: "\f044";
+						color: $white;
 					}
 				}	
 			}
