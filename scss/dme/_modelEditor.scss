@@ -88,7 +88,7 @@ div.content-pane {
 	    padding: 4px 0;
 	    text-align: left;
 
-	    li {
+	    li.menu-item {
 		    clear: both;
 		    color: $body-color;
 		    cursor: pointer;
@@ -104,6 +104,20 @@ div.content-pane {
 			    background: $primary-var-1;
 			    color: $white;
 			}
+
+			+ li.menu-heading {
+				border-top: $border-width solid $border-color;
+				padding-top: 4px;
+				margin-top: 4px;
+			}
+		}
+		
+		li.menu-heading {
+			font-size: $font-size-sm;
+	   		list-style: none;
+	    	padding: 0 12px;
+			text-transform: uppercase;
+			color: $gray-600;
 		}
 
 		hr {
