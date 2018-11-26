@@ -1,6 +1,27 @@
 /*!
  *	General editor styling
  */
+ #editor-messages-container {
+	text-align: center;
+	vertical-align: middle;
+	min-width: 200px;
+	line-height: calc(3 * 0.875rem + 2px); // aligning with buttons 2*padding 1*font-size 2px border
+
+	.editor-message-info {
+		color: $primary;
+	}
+	.editor-message-success {
+		color: $success;
+	}
+	.editor-message-warning {
+		color: darken($warning, 20%);
+	}
+	.editor-message-danger {
+		color: $danger
+	}
+}
+
+
 div.content-pane {
 	overflow: auto;
 	//padding-top: $grid-gutter-width/2;
