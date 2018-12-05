@@ -1,28 +1,23 @@
 .modal {
-	.modal-dialog {
-		.modal-content {
-			.modal-header {
-			
-				.modal-title {
-					margin: 0;
-				}
-
-			}		
-			.modal-body {
-
-
-
-					/*.col-form-label {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        .modal-title {
+          margin: 0;
+        }
+      }
+      .modal-body {
+        /*.col-form-label {
 						text-align: right;
 					}*/
 
-					.form-check {
-						padding-top: calc(0.875rem - 2px);
-						padding-bottom: calc(0.875rem + 1px);
-					}
-
-			}
-			.modal-footer {  }
-		}
-	}
+        .form-check {
+          padding-top: calc(0.875rem - 2px);
+          padding-bottom: calc(0.875rem + 1px);
+        }
+      }
+      .modal-footer {
+      }
+    }
+  }
 }
