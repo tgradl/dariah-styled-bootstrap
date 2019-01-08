@@ -13,14 +13,21 @@
         padding-left: 15px;
     }
     
+    .transformation-result-container {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        
+        .transformation-result {
+            flex-grow: 1;
+        }
 
-    .transformation-result {
-        height: 150px;
+        .transformation-result ul {
+            padding-left: 15px;
+        }
     }
 
-    .transformation-result ul {
-        padding-left: 15px;
-    }
+    
 
     /*!
     *	Grammar Editor
