@@ -1,0 +1,18 @@
+/*!
+ * Application customization based on DARIAH-DE Bootstrap styleguide
+ */
+@import "functions";
+@import "variables";
+
+@import "dariah/variables";
+
+@import "dfa/mixins";
+@import "dfa/dashboard";
+@import "dfa/versionPanel";
+@import "dfa/dataTables";
+@import "dfa/sidebar";
+@import "dfa/typeahead";
+
+@import "colreg/editor";
+@import "colreg/editorTable";
+@import "colreg/editorList";

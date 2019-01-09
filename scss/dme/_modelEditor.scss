@@ -1,0 +1,247 @@
+/*!
+ *	General editor styling
+ */
+ #editor-messages-container {
+	text-align: center;
+	vertical-align: middle;
+	min-width: 200px;
+	line-height: calc(3 * 0.875rem + 2px); // aligning with buttons 2*padding 1*font-size 2px border
+
+	.editor-message-info {
+		color: $primary;
+	}
+	.editor-message-success {
+		color: $success;
+	}
+	.editor-message-warning {
+		color: darken($warning, 20%);
+	}
+	.editor-message-danger {
+		color: $danger
+	}
+}
+
+
+div.content-pane {
+	overflow: auto;
+	//padding-top: $grid-gutter-width/2;
+
+	&.content-pane-no-overflow {
+		overflow: hidden;
+	}
+
+	.editor-content-container {
+		min-height: 0;
+		padding: 1rem;
+
+		+ .editor-content-container {
+			padding-top: 0.5rem;
+		}
+	}
+}
+
+
+/*!
+ * Log Area
+ */
+.log {
+	padding-left: 0;
+	list-style-type: none;
+	white-space: nowrap;
+	font-family: $font-family-monospace;
+	font-size: $code-font-size;
+	color: $code-color;
+
+	padding: 5px 10px;
+
+	li {
+		.log-type {
+			font-weight: $font-weight-bold;
+		}
+
+		&.log-INFO .log-type {
+			color: $info;
+		}
+
+		&.log-SUCCESS .log-type {
+			color: $success;
+		}
+
+		&.log-WARNING .log-type {
+			color: darken($warning, 15%);
+		}
+
+		&.log-ERROR .log-type {
+			color: $danger;
+		}
+	}
+}
+
+#model-natures-controls {
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+}
+
+
+/*!
+ * Editor context menu
+ * @see: https://github.com/avxto/nuContextMenu/blob/master/src/nu-context-menu.css
+ */
+.editor-context-menu {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    z-index: 9999;
+
+    &.active {
+	    opacity: 1;
+	    height: auto;
+	    width: auto;
+	}
+
+	ul {
+	    font-size: $font-size-sm;
+	    list-style: none;
+	    margin: 2px 0 0;
+	    padding: 4px 0;
+	    text-align: left;
+
+	    li.menu-item {
+		    clear: both;
+		    color: $body-color;
+		    cursor: pointer;
+		    //line-height: 1.42857;
+		    padding: 2px 20px;
+		    white-space: nowrap;
+
+			i.fas, i.far {
+				width: 25px
+			}
+
+		    &:hover {
+			    background: $primary-var-1;
+			    color: $white;
+			}
+
+			+ li.menu-heading {
+				border-top: $border-width solid $border-color;
+				padding-top: 4px;
+				margin-top: 4px;
+			}
+		}
+		
+		li.menu-heading {
+			font-size: $font-size-sm;
+	   		list-style: none;
+	    	padding: 0 12px;
+			text-transform: uppercase;
+			color: $gray-600;
+		}
+
+		hr {
+		    background: $border-color;
+		    border: 0;
+		    color: $border-color;
+		    height: 1px;
+		    margin: 4px 0;
+		}
+	}
+}
+
+.codearea,
+.sample-codearea, 
+.sample-textarea {
+	font-family: $font-family-monospace;
+	color: $code-color;
+	font-size: $code-font-size;
+
+	border: $border-width solid $input-border-color;
+	padding: $grid-gutter-width/2;
+}
+
+.sample-codearea, 
+.sample-textarea {
+	&.sample-codearea {
+		overflow: auto;
+	
+		p {
+			padding: 0;
+		}
+	}
+	
+	&.sample-textarea {
+		resize: none;
+	}
+
+	ul {
+		padding-left: 15px;
+		list-style-type: none;
+
+		li {
+			position: relative;
+			margin-top: 0.2rem;
+
+			&:before{
+				content: " ";
+				display: inline-block;
+				position: absolute;
+				left: -1.25rem;
+				top: 0.25rem;
+				width: 0;
+				height: 0;
+				margin-right: 3px;
+				margin-left: 8px;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid $gray-800;
+			 }
+
+			.btn-inline {
+				padding: 0 0.5rem;
+			}
+			
+			.sample-output-value-expanded {
+				.fa-plus-square {
+					display: none;
+				}
+				.fa-minus-square {
+					display: inline;
+				}
+			}
+			
+			.sample-output-value-collapsed {
+				.fa-plus-square {
+					display: inline;
+				}
+				.fa-minus-square {
+					display: none;
+				}
+			}
+
+		}
+
+		.sample-output-key {
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+}
+
+.sample-input-optionbar {
+	padding: $grid-gutter-width/4;
+
+	.btn-inline {
+		margin-top: -2px;
+		padding: 0 $grid-gutter-width/2;
+	}
+}

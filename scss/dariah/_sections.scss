@@ -1,11 +1,23 @@
 main {
 	margin-bottom: 20px;
-	position: relative;
-	
+
 	.btn {
-		min-width: 135px;
+		&:not(.btn-link):not(.btn-inline) {
+			min-width: 135px;
+		}
 	}
 }
+
+header {
+	z-index: 1021;
+}
+
+.vbox-overlay {
+	a {
+		border: none;
+	}
+}
+
 
 /*
  *	footer based on DARIAH-DE/StyleGuideTemplate
@@ -18,6 +30,7 @@ main {
 	margin-top: auto;
 	padding: ($grid-gutter-width / 2) $grid-gutter-width;
 	/*text-shadow: $outset-shadow;*/
+	z-index: 1021; //over fixed sidebar
 
 	@media (max-width: $footer-breakpoint) {
 		padding: ($grid-gutter-width / 2);

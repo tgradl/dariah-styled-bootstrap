@@ -1,0 +1,28 @@
+// Fonts
+$fa-font-family:          "Font Awesome 5 Free";
+$fa-font-weight-solid:    900;
+$fa-font-weight-regular:  400;
+
+
+// Footer
+
+$footer-bg-color:	#f7f7f7 !default;
+$footer-color:		$gray-900 !default;
+$footer-font-size:	$font-size-sm !default;
+
+$footer-breakpoint:	map-get($grid-breakpoints, "md");
+
+
+// Colors
+
+$labels-color:				$gray-600;
+$labels-highlight-color:	darken($labels-color, 15%) !default;
+
+
+$editor-table-head-bg-color:	$primary-var-2;
+$editor-table-border-color:		$editor-table-head-bg-color;
+
+
+$card-bg-level:                    -11 !default;
+$card-border-level:                -8 !default;
+$card-color-level:                 6 !default;

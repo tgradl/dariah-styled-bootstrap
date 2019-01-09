@@ -1,0 +1,110 @@
+.version-panel {
+	overflow-y: scroll;
+	
+	// Version panel on home dashboard
+	&#dashboard-version-panel {
+		min-height: 365px;
+		border: $border-width solid $border-color;
+		border-radius: $border-radius;		
+
+		.card {
+			margin-bottom: 0;
+			border-radius: 0;
+			border: none;
+			border-bottom: $border-width solid $border-color;
+		}
+
+	}
+
+	// Version panel sidebar in editors
+	&#editor-version-panel {
+		position: fixed; 
+		top: 0px; 
+		bottom: 0px; 
+		width: 0px; 
+		right: -1px;
+
+		background-color: $primary-var-1;
+		color: $primary;
+		border-left: $border-width solid $border-color;
+		
+		-webkit-box-shadow: $box-shadow;
+		box-shadow: $box-shadow;
+
+		.version-panel-header {
+			display: flex;
+			background-color: $primary-var-1;
+			padding: ($grid-gutter-width / 1.5) 0;
+			
+			.close-sidebar {
+				color: $white;
+				/*position: absolute;
+				top: $grid-gutter-width;
+				right: $grid-gutter-width;*/
+				cursor: pointer;
+			}
+
+			h1 {
+				margin: 0 auto 0 0;
+				color: $white;
+			}
+		}
+
+		.sidebar-wrapper {
+			padding: 0 ($grid-gutter-width / 1.5) ($grid-gutter-width / 1.5) ($grid-gutter-width / 1.5);
+		}
+
+		
+	}
+	
+
+	.card {
+		margin-bottom: ($grid-gutter-width / 4);
+
+		.card-heading {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: ($grid-gutter-width / 2);
+			margin-left: -45px;
+
+			.card-icon {
+				padding: 0 ($grid-gutter-width / 2);
+				vertical-align: middle;
+				width: 45px;
+
+				a {
+					border-bottom: none;
+					@include hover-focus {
+						text-decoration: none;
+					}
+				}
+			}
+
+			.card-title {
+				margin: 0 auto 0 0;
+			}
+		}
+
+		&.version-deleted  {
+			.card-text {
+				color: $danger;
+			}
+		}
+
+		&.version-draft  {
+			.card-text {
+				color: $warning;
+			}
+		}
+
+		&.version-published  {
+			.card-text {
+				color: $info;
+			}
+		}
+
+		.card-body {
+			padding-left: ($grid-gutter-width * 2);
+		}
+	}
+}

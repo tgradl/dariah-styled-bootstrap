@@ -1,6 +1,6 @@
 label:not(.sr-only), legend {
-    color: $gray-600;
-    font-size: 0.875rem;
+    color: $labels-color;
+    //font-size: 0.875rem;
     font-weight: 700;
 }
 
@@ -20,4 +20,15 @@ legend {
 
 fieldset, legend {
     border: 0;
+}
+
+.col-horizontal-form-label {
+    text-align: right;
+
+    // Properties of .col-form-label
+    padding-top: calc(0.875rem + 1px);
+    padding-bottom: calc(0.875rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
 }
