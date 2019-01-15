@@ -1,0 +1,70 @@
+#search-loading-indicator {
+    position: absolute;
+    right: 0;
+}
+
+#search-results-container {
+    
+
+    #search-results {
+        .tab-pane {
+            border-right: $border-width solid $border-color;
+            border-bottom: $border-width solid $border-color;
+            border-left: $border-width solid $border-color;
+        }
+    }
+}
+
+
+.search-results-item {
+    .search-results-image {
+        position: relative;
+        padding: 5px;
+        border: $border-width solid $border-color;
+        margin: ($grid-gutter-width/2) $grid-gutter-width;
+        
+        -webkit-box-shadow: $box-shadow-sm; 
+        box-shadow: $box-shadow-sm;
+        
+        -webkit-border-radius: $border-radius;
+        border-radius: $border-radius;
+    
+        /* useful if you don't want a bg color from leaking outside the border: */
+        -webkit-background-clip: padding-box; 
+        background-clip: padding-box;
+        
+        background: url("../../img/page_icon_faded.png") center 20px no-repeat;
+        
+        height: 145px;
+        width: 145px;
+
+        .search-result-image-tmb {
+            height: 135px;
+            width: 135px;
+        }
+
+        .search-result-image-tmb, 
+        .item-image {
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .no-preview-overlay {
+            position: absolute;
+            top: 60px; bottom: 25px; left: 0px; right: 0px;
+        
+            border-top: 2px solid $primary-var-1;
+            border-bottom: 2px solid $primary-var-1;
+            background-color: $primary;
+            opacity: 0.8;
+            
+            text-align: center;
+            vertical-align: middle;
+            padding: 8px 5px;
+            color: white;
+            font-style: italic;	
+            z-index: 100;
+        }
+    }
+}

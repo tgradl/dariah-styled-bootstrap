@@ -51,7 +51,7 @@ dt {
 }
 
 .hide {
-    display: none;
-    visibility: hidden;
-    height: 0;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
 }
