@@ -1,0 +1,13 @@
+.nav-tabs {
+    .nav-link {
+        font-size: 110%;
+    }
+}
+
+.tab-pane {
+    border-right: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color;
+    border-left: $border-width solid $border-color;
+
+    padding: $grid-gutter-width/2;
+}
