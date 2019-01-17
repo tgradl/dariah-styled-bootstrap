@@ -1,0 +1,97 @@
+table.dataTable.state-table {
+	border-collapse: separate;
+	border-spacing: 0 1px;
+	width: 100%;
+
+	&.state-table-navigatable,
+	&.state-table-selectable {
+		tbody {
+			tr {
+				&.state-row-default { &.active, &:hover, &.group { background-color: lighten($secondary, 40%); } }
+				&.state-row-ok { &.active, &:hover, &.group { background-color: lighten($success, 40%); } }
+				&.state-row-info { &.active, &:hover, &.group { background-color: lighten($info, 40%); }	}
+				&.state-row-warning { &.active, &:hover, &.group { background-color: lighten($warning, 40%); } }
+				&.state-row-danger, &.state-row-error { &.active, &:hover, &.group { background-color: lighten($danger, 40%); } }
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	&.state-table-navigatable { 
+		tbody {
+			tr {
+				&.active, &:hover {
+					td {
+						&:last-child {
+							&:before {
+								content: "\f0c1"; 
+								font-family: 'Font Awesome 5 Free';
+								font-weight: 900;
+								position: absolute;
+								right: 1rem;
+								color: $secondary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			&.state-row-default { th, td { border-color: $secondary; } }
+			&.state-row-ok { th, td { border-color: $success; } }
+			&.state-row-info { th, td { border-color: $info; } }
+			&.state-row-warning { th, td { border-color: $warning; } }
+			&.state-row-danger, &.state-row-error {	th, td { border-color: $danger; } }
+
+
+			th, td {
+				position: relative;
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+				font-weight: normal;
+				vertical-align: middle;
+				
+				a {
+					border-bottom: none;
+				}
+			}
+			th {
+				border-left: 6px solid;
+				text-align: center;
+				width: 8em;
+				padding: 5px;
+
+				&.state-default i { color: $secondary; font-weight: normal; }
+				&.state-ok i { color: $success; font-weight: normal; }
+				&.state-info i { color: $info; font-weight: bold; }
+				&.state-warning i { color: $warning ; font-weight: bold; }
+				&.state-danger i, .state-error i { color: $danger; font-weight: bold; }
+			}
+			td {
+				&:last-child {
+					border-right-style: solid;
+					border-right-width: $border-width;
+				}
+				&.dataTables_empty {
+					border: 1px solid $secondary;
+					padding: 10px;
+					text-align: center;
+				}
+			}
+
+			&.group {
+				th, td {
+					h2.group-heading {
+						margin: 0 $grid-gutter-width/2 0 $grid-gutter-width/2;
+					}
+				}
+			}
+		}
+	} 
+}
