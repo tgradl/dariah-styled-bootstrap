@@ -71,11 +71,11 @@ table.table.state-table {
 				width: 8em;
 				padding: 5px;
 
-				&.state-default i { color: $secondary; font-weight: normal; }
-				&.state-ok i { color: $success; font-weight: normal; }
-				&.state-info i { color: $info; font-weight: bold; }
-				&.state-warning i { color: $warning ; font-weight: bold; }
-				&.state-danger i, .state-error i { color: $danger; font-weight: bold; }
+				&.state-default i { color: $secondary; }
+				&.state-ok i { color: $success; }
+				&.state-info i { color: $info; }
+				&.state-warning i { color: $warning ; }
+				&.state-danger i, .state-error i { color: $danger; }
 			}
 			td {
 				&:last-child {
