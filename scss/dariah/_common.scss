@@ -67,9 +67,8 @@ dt {
     white-space: nowrap;
 }
 
-a.btn {
-    outline: none;
-    :hover {
-        border: none;
+a.btn-link {
+    &:hover {
+        border-color: transparent;
     }
 }
