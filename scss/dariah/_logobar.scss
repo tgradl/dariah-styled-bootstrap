@@ -7,6 +7,8 @@
 	margin: 0 auto !important;
 	text-align: center;
 
+	background-color: $gray-200;
+
 	a {
 		border: 0;
 	}
@@ -56,17 +58,6 @@
 		&.logobar-link-sm {
 			height: ($grid-gutter-width * 2);
 
-			// Paint over logo tagline
-			&::after {
-				background: #fff;
-				bottom: -17px;
-				content: '';
-				display: block;
-				width: 100%;
-				height: 20px;
-				position: absolute;
-			}
-
 			.logobar-title {
 				margin-top: 22px;
 				font-size: 1.15rem;
@@ -89,10 +80,10 @@
 
 		&:not(.logobar-link-sm) {			
 			.logobar-logo {
-				height: ($grid-gutter-width * 6);
+				height: ($grid-gutter-width * 8);
 				left: -23px; // 1
 				margin: -9px 0 0;
-				width: 303px; // IE 11
+				width: 200px; // IE 11
 
 				@media (max-width: $footer-breakpoint) {
 					height: ($grid-gutter-width * 4.5);
