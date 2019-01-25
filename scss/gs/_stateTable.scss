@@ -1,0 +1,125 @@
+table.table.state-table {
+	border-collapse: separate;
+	border-spacing: 0 1px;
+	width: 100%;
+
+	&.state-table-navigatable,
+	&.state-table-selectable {
+		tbody {
+			tr {
+				&.state-row-default { &.active, &:hover, &.group { background-color: lighten($secondary, 40%); } }
+				&.state-row-ok { &.active, &:hover, &.group { background-color: lighten($success, 40%); } }
+				&.state-row-info { &.active, &:hover, &.group { background-color: lighten($info, 40%); }	}
+				&.state-row-warning { &.active, &:hover, &.group { background-color: lighten($warning, 40%); } }
+				&.state-row-danger, &.state-row-error { &.active, &:hover, &.group { background-color: lighten($danger, 40%); } }
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	&.state-table-navigatable { 
+		tbody {
+			tr {
+				&.active, &:hover {
+					td {
+						&:last-child {
+							&:before {
+								content: "\f0c1"; 
+								font-family: 'Font Awesome 5 Free';
+								font-weight: 900;
+								position: absolute;
+								right: 1rem;
+								color: $secondary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			&.state-row-default { th, td { border-color: $secondary; } }
+			&.state-row-ok { th, td { border-color: $success; } }
+			&.state-row-info { th, td { border-color: $info; } }
+			&.state-row-warning { th, td { border-color: $warning; } }
+			&.state-row-danger, &.state-row-error {	th, td { border-color: $danger; } }
+
+
+			th, td {
+				position: relative;
+				border-top: 1px solid;
+				border-bottom: 1px solid;
+				font-weight: normal;
+				vertical-align: middle;
+				
+				a {
+					border-bottom: none;
+				}
+
+				.btn {
+					padding: $grid-gutter-width/4;
+				}
+			}
+			th {
+				border-left: 6px solid;
+				text-align: center;
+				width: 8em;
+				padding: 5px;
+
+				&.state-default i { color: $secondary; }
+				&.state-ok i { color: $success; }
+				&.state-info i { color: $info; }
+				&.state-warning i { color: $warning ; }
+				&.state-danger i, .state-error i { color: $danger; }
+			}
+			td {
+				&:last-child {
+					border-right-style: solid;
+					border-right-width: $border-width;
+				}
+				&.dataTables_empty {
+					border: 1px solid $secondary;
+					padding: 10px;
+					text-align: center;
+				}
+			}
+
+			&.group {
+				th, td {
+					h2.group-heading {
+						margin: 0 $grid-gutter-width/2 0 $grid-gutter-width/2;
+					}
+				}
+			}
+		}
+	} 
+
+	/* Specifics for inner (data) lists */
+	ul.inner-state-list {
+		width: 100%;
+		position: relative;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			padding: 4px 5px;   
+			/*border-bottom: 1px solid #EEE;*/
+
+			.state-heading {
+				font-weight: bold;
+			}
+		
+			.state-block-heading {
+				font-weight: bold;
+				font-size: 125%;
+				font-style: italic;
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+#search-loading-indicator {
+    position: absolute;
+    right: 0;
+}
+
+#search-results-container {
+    #search-results {
+        .tab-pane {
+            .search-result-tab-heading {
+                font-style: italic;
+            }
+
+            .search-results-item {
+                margin: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width $grid-gutter-width/2;
+            
+                .search-results-image {
+                    position: relative;
+                    padding: 5px;
+                    border: $border-width solid $border-color;
+                    margin-top: $grid-gutter-width/4;
+                    margin-right: $grid-gutter-width;
+                    
+                    -webkit-box-shadow: $box-shadow-sm; 
+                    box-shadow: $box-shadow-sm;
+                    
+                    -webkit-border-radius: $border-radius;
+                    border-radius: $border-radius;
+                
+                    /* useful if you don't want a bg color from leaking outside the border: */
+                    -webkit-background-clip: padding-box; 
+                    background-clip: padding-box;
+                    
+                    background: url("../../img/page_icon_faded.png") center 20px no-repeat;
+                    
+                    height: 145px;
+                    width: 145px;
+            
+                    .search-result-image-tmb {
+                        height: 135px;
+                        width: 135px;
+                    }
+            
+                    .search-result-image-tmb, 
+                    .item-image {
+                        background-repeat:no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                    }
+            
+                    .no-preview-overlay {
+                        position: absolute;
+                        top: 60px; bottom: 25px; left: 0px; right: 0px;
+                    
+                        border-top: 2px solid $primary-var-1;
+                        border-bottom: 2px solid $primary-var-1;
+                        background-color: $primary;
+                        opacity: 0.8;
+                        
+                        text-align: center;
+                        vertical-align: middle;
+                        padding: 8px 5px;
+                        color: white;
+                        font-style: italic;	
+                        z-index: 100;
+                    }
+                }
+            
+                .search-results-resource-item {
+                    .search-result-score {
+                        float: right;
+                        font-size: 90%;
+                    }
+            
+                    .search-result-datasource {
+                        margin-bottom: 0;
+                    }
+            
+                    .search-result-title {
+                        margin-bottom: $grid-gutter-width/3;
+                    }
+            
+                    ul.search-result-links {
+                        list-style: none;
+                        padding: 0;
+                        margin-bottom: $grid-gutter-width/3;
+            
+                        li {
+                            overflow-wrap: break-word;
+                            word-wrap: break-word;
+                            word-break: break-word;
+                        }
+                    }
+            
+                    .search-result-objects {
+                        > span {
+                            display: inline-block;
+                            padding: 0 0.25rem 0.25rem 0.25rem;
+                            cursor: pointer;
+            
+                            i.fa {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+            
+                    .search-result-panel {
+                        border: $border-width solid $border-color;
+                        margin-top: $grid-gutter-width/4;
+                        margin-bottom: $grid-gutter-width/2;
+                        
+                        padding-left: $grid-gutter-width / 2;
+                        padding-right: $grid-gutter-width / 2;
+            
+                        overflow-wrap: break-word;
+                        word-wrap: break-word;
+            
+                        .btn {
+                            padding-left: 0;
+                        }
+            
+                        .collapse {
+                            ul {
+                                padding-left: 1.25rem;
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .result-collection {
+                margin-bottom: $grid-gutter-width;
+            }
+        }
+    }
+}

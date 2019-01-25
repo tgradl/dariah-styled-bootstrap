@@ -1,5 +1,6 @@
 
 @each $color, $value in $theme-colors {
+  .color-#{$color}, 
   .glyphicon-color-#{$color}, 
   .fa-color-#{$color} {
 	color: $value;
@@ -51,7 +52,23 @@ dt {
 }
 
 .hide {
-    display: none;
-    visibility: hidden;
-    height: 0;
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
+.no-break-out {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.no-break {
+    white-space: nowrap;
+}
+
+a.btn-link {
+    &:hover {
+        border-color: transparent;
+    }
 }

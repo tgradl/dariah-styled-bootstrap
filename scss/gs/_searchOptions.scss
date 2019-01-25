@@ -1,0 +1,11 @@
+#search-available-collections {
+    margin-bottom: 0;
+    
+    li {
+        display: block;
+        
+        &::before {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.slider {
+    width: 95%;
+
+    > .dragger {
+        background: lighten($primary-var-1, 20%);
+        background: -webkit-linear-gradient(top, lighten($primary-var-1, 30%), $primary-var-1);
+        background: -moz-linear-gradient(top, lighten($primary-var-1, 30%), $primary-var-1);
+        background: linear-gradient(top, lighten($primary-var-1, 30%), $primary-var-1);
+      
+        -webkit-box-shadow: inset $box-shadow;
+        -moz-box-shadow: inset $box-shadow;
+        box-shadow: inset $box-shadow;
+      
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+      
+        border: $border-width solid $primary;
+        width: 16px;
+        height: 16px;
+
+        &:hover {
+            background: -webkit-linear-gradient(top, lighten($primary-var-1, 50%), lighten($primary-var-1, 20%));
+        }
+      }
+
+
+    > .track, 
+    > .highlight-track {
+        background: #ccc;
+        background: -webkit-linear-gradient(top, #bbb, #ddd);
+        background: -moz-linear-gradient(top, #bbb, #ddd);
+        background: linear-gradient(top, #bbb, #ddd);
+        
+        -webkit-box-shadow: inset $box-shadow-sm;
+        -moz-box-shadow: inset $box-shadow-sm;
+        box-shadow: inset $box-shadow-sm;
+        
+        -webkit-border-radius: $border-radius;
+        -moz-border-radius: $border-radius;
+        border-radius: $border-radius;
+        
+        border: $border-width solid #aaa;
+        height: 6px;
+    }
+
+    > .highlight-track {
+        background: lighten($primary-var-1, 20%);
+        background: -webkit-linear-gradient(top, lighten($primary-var-1, 30%), $primary-var-1);
+        background: -moz-linear-gradient(top, lighten($primary-var-1, 30%), $primary-var-1);
+        background: linear-gradient(top, lighten($primary-var-1, 30%), $primary-var-1);
+        
+        border-color: $primary;
+    }
+  }

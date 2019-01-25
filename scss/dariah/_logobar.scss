@@ -14,14 +14,13 @@
 
 	.logobar-link {
 		display: inline-block;
-		margin: 0 auto;
+		margin: 0 auto 1rem auto;
 		padding: 0 $grid-gutter-width;
 		position: relative;
 		z-index: 1;
 
 		// 1. Center logo visually
 		.logobar-logo {
-			display: block;
 			pointer-events: none; // Allow click-trough on spike
 			position: relative;
 			
@@ -34,6 +33,24 @@
 				stroke: #fff;
 				z-index: -1;
 			}
+		}
+
+		.logobar-title {
+			
+			position: relative;
+			font-family: $headings-font-family;
+			
+			font-weight: $font-weight-bold;
+			text-transform: uppercase;
+			display: inline-block;
+			color: $primary;
+			
+			text-align: left;
+			border-left: $border-width solid $primary;
+			padding-left: 25px;
+			font-style: normal;
+			line-height: 1.25;
+			font-weight: $font-weight-bold;
 		}
 
 		&.logobar-link-sm {
@@ -50,22 +67,27 @@
 				position: absolute;
 			}
 
+			.logobar-title {
+				margin-top: 22px;
+				font-size: 1.15rem;
+				vertical-align: top;
+			}
+
 			.logobar-logo {
 				height: ($grid-gutter-width * 3);
 				left: -10px; // 1
-				margin: -6px 0 0;
+				margin: -18px 0 0;
 				width: 151px; // IE 11
 			
 				&.logobar-spike {
 					stroke-width: 18px;
-					top: -4px;
+					top: 7px;
 					left: 14px;
 				}
 			}
 		}
 
-		&:not(.logobar-link-sm) {
-
+		&:not(.logobar-link-sm) {			
 			.logobar-logo {
 				height: ($grid-gutter-width * 6);
 				left: -23px; // 1
@@ -90,6 +112,12 @@
 						left: 7px;
 					}
 				}
+			}
+
+			.logobar-title {
+				margin-top: 35px;
+				font-size: 2rem;
+				vertical-align: middle;
 			}
 		}
 	}

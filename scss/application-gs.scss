@@ -7,13 +7,15 @@
 @import "dariah/variables";
 
 @import "dfa/mixins";
-@import "dfa/dashboard";
-@import "dfa/versionPanel";
 @import "dfa/dataTables";
 @import "dfa/sidebar";
+@import "dfa/modal";
 @import "dfa/typeahead";
+@import "dfa/tabs";
 
-@import "colreg/editor";
-@import "colreg/editorTable";
-@import "colreg/editorList";
-@import "colreg/sidebarInlineList";
+@import "gs/wordcloud";
+@import "gs/searchResults";
+@import "gs/searchOptions";
+@import "gs/slider";
+@import "gs/stateTable";
+@import "gs/statusContainer";
