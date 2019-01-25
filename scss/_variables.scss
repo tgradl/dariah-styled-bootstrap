@@ -5,7 +5,7 @@
 
 // Color system
 
-$white:    #fff !default;
+$white:    #F9F9F9 !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #eeeeee !default;
 $gray-300: #dee2e6 !default;
@@ -34,16 +34,19 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #213365 !default;
-$indigo:  #494e7d !default;
-$purple:  #727299 !default;
-$pink:    #e83e8c !default; // Bootstrap default
-$red:     #652122 !default;
-$orange:  #655321 !default; 
-$yellow:  #ffc107 !default; // Bootstrap default
-$green:   #446521 !default;
-$teal:    #20c997 !default; // Bootstrap default
-$cyan:    #17a2b8 !default; // Bootstrap default
+$mww-green: #035151;
+$mww-gold: #A08246;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -66,9 +69,9 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
-$primary-var-1: $indigo !default;
-$primary-var-2: $purple !default;
+$primary:       $mww-green !default;
+$primary-var-1: $mww-green !default;
+$primary-var-2: $mww-gold !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -288,7 +291,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      Roboto, Arial, Helvetica, sans-serif !default;
+$font-family-sans-serif:      "Open Sans", sans-serif !default;
 
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
@@ -315,7 +318,7 @@ $h5-font-size:                $font-size-base * 0.875 !default; // CAPS
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      ($spacer * 0.875) !default;
-$headings-font-family:        MuseoSansRounded, Arial, Helvetica, sans-serif !default;
+$headings-font-family:        $font-family-base;
 $headings-font-weight:        normal !default;
 $headings-line-height:        inherit !default;
 $headings-color:              $primary !default;
