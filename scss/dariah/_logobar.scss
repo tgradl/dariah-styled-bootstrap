@@ -4,21 +4,18 @@
  */
 .logobar {
 	font-size: ($grid-gutter-width * 2); // TODO: Why does this help removing the bottom gap?
-	margin: 0 auto $grid-gutter-width auto !important;
+	margin: 0 auto !important;
 	text-align: center;
-
-	background-color: $footer-bg-color;
-	border-top: 3px solid $primary-var-2;
-	border-bottom: 2px solid $primary-var-1;
 
 	a {
 		border: 0;
 	}
 
+
 	.logobar-link {
 		display: inline-block;
-		margin: 0 auto 0 auto;
-		padding: 0 $grid-gutter-width $grid-gutter-width/2 $grid-gutter-width;
+		margin: 0 auto 1rem auto;
+		padding: 0 $grid-gutter-width;
 		position: relative;
 		z-index: 1;
 
@@ -26,9 +23,20 @@
 		.logobar-logo {
 			pointer-events: none; // Allow click-trough on spike
 			position: relative;
+			
+			&.logobar-spike {
+				fill: #fff;
+				margin: 0 $grid-gutter-width;
+				position: absolute;
+				top: 0;
+				left: 0;
+				stroke: #fff;
+				z-index: -1;
+			}
 		}
 
 		.logobar-title {
+			
 			position: relative;
 			font-family: $headings-font-family;
 			
@@ -38,7 +46,7 @@
 			color: $primary;
 			
 			text-align: left;
-			//border-left: $border-width solid $primary;
+			border-left: $border-width solid $primary;
 			padding-left: 25px;
 			font-style: normal;
 			line-height: 1.25;
@@ -46,30 +54,45 @@
 		}
 
 		&.logobar-link-sm {
-			height: ($grid-gutter-width * 4);
+			height: ($grid-gutter-width * 2);
+
+			// Paint over logo tagline
+			&::after {
+				background: #fff;
+				bottom: -17px;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 20px;
+				position: absolute;
+			}
 
 			.logobar-title {
-				margin-top: 27px;
-				font-size: 1.75rem;
+				margin-top: 22px;
+				font-size: 1.15rem;
 				vertical-align: top;
 			}
 
 			.logobar-logo {
-				height: ($grid-gutter-width * 5);
+				height: ($grid-gutter-width * 3);
 				left: -10px; // 1
 				margin: -18px 0 0;
 				width: 151px; // IE 11
+			
+				&.logobar-spike {
+					stroke-width: 18px;
+					top: 7px;
+					left: 14px;
+				}
 			}
 		}
 
-		&:not(.logobar-link-sm) {		
-			height: ($grid-gutter-width * 7);
-			
+		&:not(.logobar-link-sm) {			
 			.logobar-logo {
-				height: ($grid-gutter-width * 8);
+				height: ($grid-gutter-width * 6);
 				left: -23px; // 1
 				margin: -9px 0 0;
-				width: 200px; // IE 11
+				width: 303px; // IE 11
 
 				@media (max-width: $footer-breakpoint) {
 					height: ($grid-gutter-width * 4.5);
@@ -77,11 +100,23 @@
 					margin: (-$grid-gutter-width / 4) 0 (-$grid-gutter-width / 2);
 					width: 227px; // IE 11
 				}
+
+				&.logobar-spike {
+					stroke-width: 12px;
+					top: -8px;
+					left: 1px;
+
+					@media (max-width: $footer-breakpoint) {
+						stroke-width: 18px;
+						top: -5px;
+						left: 7px;
+					}
+				}
 			}
 
 			.logobar-title {
-				margin-top: 0px;
-				font-size: 2.5rem;
+				margin-top: 35px;
+				font-size: 2rem;
 				vertical-align: middle;
 			}
 		}
