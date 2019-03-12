@@ -90,6 +90,29 @@
                             word-break: break-word;
                         }
                     }
+
+                    ul.search-result-highlights {
+                        //list-style: ;
+                        //padding: 0;
+                        margin-bottom: $grid-gutter-width/3;
+                        font-size: 90%;
+            
+                        li {
+                            overflow-wrap: break-word;
+                            word-wrap: break-word;
+                            word-break: break-word;
+
+                            font-style: italic;
+
+                            span.result-highlight-field {
+                                font-style: normal;
+                            }
+
+                            span.result-highlight {
+                                font-weight: bold;
+                            }
+                        }
+                    }
             
                     .search-result-objects {
                         > span {
