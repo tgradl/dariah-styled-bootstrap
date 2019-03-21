@@ -245,3 +245,16 @@ div.content-pane {
 		padding: 0 $grid-gutter-width/2;
 	}
 }
+
+.editor-properties {
+	font-size: $font-size-sm;
+
+	.editor-property {
+		margin-bottom: $grid-gutter-width / 2;
+
+		label, span, pre {
+			display: block-inline;
+			margin: 0;
+		}
+	}
+}
