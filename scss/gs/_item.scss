@@ -1,0 +1,122 @@
+#item-detail-container {
+
+    #item-detail-collection {
+        margin-bottom: 0;
+    }
+    #item-detail-resource {
+        font-size: 2rem;
+    }
+    
+    .item-detail-heading {}
+
+    .item-detail-linklist {
+        .item-detail-linklist-label {}
+        .item-detail-linklist-url {}
+    }
+
+    #item-detail-dataset-container {
+        overflow: auto;
+        font-family: $font-family-monospace;
+        color: $code-color;
+        font-size: $code-font-size;
+    
+        //border: $border-width solid $input-border-color;
+        padding: $grid-gutter-width/2;
+        margin-bottom: $grid-gutter-width;
+
+       ul {
+		padding-left: 15px;
+		list-style-type: none;
+
+		li {
+			position: relative;
+			margin-top: 0.2rem;
+
+			&:before{
+				content: " ";
+				display: inline-block;
+				position: absolute;
+				left: -1.25rem;
+				top: 0.25rem;
+				width: 0;
+				height: 0;
+				margin-right: 3px;
+				margin-left: 8px;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid $gray-800;
+			 }
+
+			.btn-inline {
+				padding: 0 0.5rem;
+			}
+			
+			.sample-output-value-expanded {
+				.fa-plus-square {
+					display: none;
+				}
+				.fa-minus-square {
+					display: inline;
+				}
+			}
+			
+			.sample-output-value-collapsed {
+				.fa-plus-square {
+					display: inline;
+				}
+				.fa-minus-square {
+					display: none;
+				}
+			}
+
+		}
+
+		.sample-output-key {
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+    }
+
+    #item-images {
+        position: relative;
+        padding: 5px;
+        border: $border-width solid $border-color;
+        margin-top: $grid-gutter-width/4;
+        margin-right: $grid-gutter-width;
+        
+        -webkit-box-shadow: $box-shadow-sm; 
+        box-shadow: $box-shadow-sm;
+        
+        -webkit-border-radius: $border-radius;
+        border-radius: $border-radius;
+    
+        /* useful if you don't want a bg color from leaking outside the border: */
+        -webkit-background-clip: padding-box; 
+        background-clip: padding-box;
+        
+        background: url("../../img/page_icon_faded.png") center 20px no-repeat;
+        
+        //height: 145px;
+        //width: 145px;
+    
+        #carousel-item-images {
+            .carousel-indicators {}
+            .carousel-inner {}
+        }
+    
+        .carousel-control {}
+    
+        .search-result-image-tmb {
+            height: 135px;
+            width: 135px;
+        }
+    
+        .search-result-image-tmb, 
+        .item-image {
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+}

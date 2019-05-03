@@ -1,19 +1,20 @@
 /*!
  * Application customization based on DARIAH-DE Bootstrap styleguide
  */
-@import "functions";
-@import "variables";
-
-@import "dariah/variables";
-
-@import "dfa/mixins";
-@import "dfa/dataTables";
-@import "dfa/sidebar";
-@import "dfa/modal";
-@import "dfa/typeahead";
-
-@import "dme/editorLayout";
-@import "dme/modelEditor";
-@import "dme/fileUpload";
-@import "dme/activityHistory";
-@import "dme/modalEditors";
+ @import "functions";
+ @import "variables";
+ 
+ @import "dariah/variables";
+ 
+ @import "dfa/mixins";
+ @import "dfa/dataTables";
+ @import "dfa/sidebar";
+ @import "dfa/modal";
+ @import "dfa/typeahead";
+ 
+ @import "dme/editorLayout";
+ @import "dme/modelEditor";
+ @import "dme/fileUpload";
+ @import "dme/activityHistory";
+ @import "dme/modalEditors";
+ @import "dme/grammarValidation";

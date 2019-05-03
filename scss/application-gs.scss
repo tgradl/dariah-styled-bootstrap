@@ -1,21 +1,22 @@
 /*!
  * Application customization based on DARIAH-DE Bootstrap styleguide
  */
-@import "functions";
-@import "variables";
-
-@import "dariah/variables";
-
-@import "dfa/mixins";
-@import "dfa/dataTables";
-@import "dfa/sidebar";
-@import "dfa/modal";
-@import "dfa/typeahead";
-@import "dfa/tabs";
-
-@import "gs/wordcloud";
-@import "gs/searchResults";
-@import "gs/searchOptions";
-@import "gs/slider";
-@import "gs/stateTable";
-@import "gs/statusContainer";
+ @import "functions";
+ @import "variables";
+ 
+ @import "dariah/variables";
+ 
+ @import "dfa/mixins";
+ @import "dfa/dataTables";
+ @import "dfa/sidebar";
+ @import "dfa/modal";
+ @import "dfa/typeahead";
+ @import "dfa/tabs";
+ 
+ @import "gs/wordcloud";
+ @import "gs/searchResults";
+ @import "gs/item";
+ @import "gs/searchOptions";
+ @import "gs/slider";
+ @import "gs/stateTable";
+ @import "gs/statusContainer";
