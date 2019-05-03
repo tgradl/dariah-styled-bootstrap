@@ -1,0 +1,33 @@
+/*!
+ *	Grammar validation modal dialog
+ */
+#grammar-validation-container {
+    .grammar-processing {
+        &.grammar-error {
+            h2 {
+                color: $danger;
+            }
+        }
+        &.grammar-success {
+            h2 {
+                color: $success;
+            }
+        }
+
+        h2 {
+            color: $headings-color;
+            cursor: pointer;
+        }
+        .card {
+            padding: $grid-gutter-width/2;
+            margin-bottom: $grid-gutter-width;
+            h4 {
+                margin-bottom: $grid-gutter-width/2;
+            }
+            ul {
+                padding: 0 0 0 $grid-gutter-width/2;
+                margin: 0;
+            }
+        }
+    }
+}
