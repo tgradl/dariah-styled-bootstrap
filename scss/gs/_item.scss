@@ -128,11 +128,17 @@
         //width: 145px;
     
         #carousel-item-images {
-            .carousel-indicators {}
-            .carousel-inner {}
+            .carousel-inner {
+                .preview-image-label {
+                    text-align: center;
+                }
+            }
         }
     
-        .carousel-control {}
+        .carousel-control-next,
+        .carousel-control-prev {
+            border: none;
+        }
     
         .search-result-image-tmb {
             height: 135px;
