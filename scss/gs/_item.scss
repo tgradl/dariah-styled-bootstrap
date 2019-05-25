@@ -6,25 +6,26 @@
     #item-detail-resource {
         font-size: 2rem;
     }
-    
-    .item-detail-heading {}
-
-    .item-detail-linklist {
-        .item-detail-linklist-label {}
-        .item-detail-linklist-url {}
-    }
 
     .item-detail-hierarchy {
         text-transform: $h3-transform;
-        list-style-type: none;
         padding: 0 0 0 $grid-gutter-width;
+
         li {
+            list-style-type: none;
+
             &.item-detail-hierarchy-element {
                 font-weight: normal;
+                
             }
 
             &.item-detail-hierarchy-element-selected {
                 font-weight: bold;
+                &:before {
+                    content: '\2192';
+                    margin-left: -18px;
+                    margin-right: 2px;
+                }
             }
 
             &.item-detail-hierarchy-placeholder {
