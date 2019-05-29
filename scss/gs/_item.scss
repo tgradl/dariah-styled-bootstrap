@@ -109,49 +109,27 @@
 
     #item-images {
         position: relative;
+        width: 100%;
+        overflow: hidden;
+
         padding: 5px;
         border: $border-width solid $border-color;
-        margin-top: $grid-gutter-width/4;
-        margin-right: $grid-gutter-width;
-        
+    
         -webkit-box-shadow: $box-shadow-sm; 
         box-shadow: $box-shadow-sm;
         
         -webkit-border-radius: $border-radius;
         border-radius: $border-radius;
-    
-        /* useful if you don't want a bg color from leaking outside the border: */
-        -webkit-background-clip: padding-box; 
-        background-clip: padding-box;
-        
-        background: url("../../img/page_icon_faded.png") center 20px no-repeat;
-        
-        //height: 145px;
-        //width: 145px;
-    
-        #carousel-item-images {
-            .carousel-inner {
-                .preview-image-label {
-                    text-align: center;
-                }
-            }
+
+        img {
+            width: 100%; 
+            height: auto;
         }
-    
+
         .carousel-control-next,
         .carousel-control-prev {
             border: none;
-        }
-    
-        .search-result-image-tmb {
-            height: 135px;
-            width: 135px;
-        }
-    
-        .search-result-image-tmb, 
-        .item-image {
-            background-repeat:no-repeat;
-            background-position: center center;
-            background-size: cover;
+            background-color: $primary-var-2;
         }
     }
 }
