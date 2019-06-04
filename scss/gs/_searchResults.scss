@@ -47,6 +47,35 @@
                         background-size: cover;
                     }
             
+                    .image-loading-overlay,
+                    .no-preview-overlay {
+                        position: absolute;
+                        text-align: center;
+                        vertical-align: middle;
+                        padding: 8px 5px;
+                        z-index: 100;
+
+                        &.image-loading-overlay {
+                            top: 40px; bottom: 0px; left: 0px; right: 0px;
+
+                            color: $primary-var-2;
+                            opacity: 0.8;
+                        }
+
+                        &.no-preview-overlay {
+                            top: 60px; bottom: 25px; left: 0px; right: 0px;
+                            
+                            border-top: 2px solid $primary-var-1;
+                            border-bottom: 2px solid $primary-var-1;
+                            background-color: $primary;
+                            opacity: 0.8;
+                            
+                            color: white;
+                            font-style: italic;	
+                        }
+
+                    }
+
                     .no-preview-overlay {
                         position: absolute;
                         top: 60px; bottom: 25px; left: 0px; right: 0px;
@@ -91,16 +120,18 @@
                         }
                     }
 
-                    ul.search-result-highlights {
+                    div.search-result-highlights {
                         //list-style: ;
                         //padding: 0;
                         margin-bottom: $grid-gutter-width/3;
-                        font-size: 90%;
+                        font-size: 85%;
             
-                        li {
+                        > div {
                             overflow-wrap: break-word;
                             word-wrap: break-word;
                             word-break: break-word;
+
+                            margin: $grid-gutter-width/3;
 
                             font-style: italic;
 
@@ -110,6 +141,7 @@
 
                             span.result-highlight {
                                 font-weight: bold;
+                                color: $primary;
                             }
                         }
                     }
