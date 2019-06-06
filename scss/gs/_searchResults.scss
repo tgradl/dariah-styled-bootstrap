@@ -13,7 +13,7 @@
             .search-results-item {
                 margin: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width $grid-gutter-width/2;
             
-                .search-results-image {
+                .search-result-image-container {
                     position: relative;
                     padding: 5px;
                     border: $border-width solid $border-color;
@@ -26,27 +26,22 @@
                     -webkit-border-radius: $border-radius;
                     border-radius: $border-radius;
                 
-                    /* useful if you don't want a bg color from leaking outside the border: */
+                    // useful if you don't want a bg color from leaking outside the border: 
                     -webkit-background-clip: padding-box; 
                     background-clip: padding-box;
                     
-                    background: url("../../img/page_icon_faded.png") center 20px no-repeat;
-                    
                     height: 145px;
                     width: 145px;
-            
-                    .search-result-image-tmb {
+
+                    .search-result-image {
                         height: 135px;
                         width: 135px;
-                    }
-            
-                    .search-result-image-tmb, 
-                    .item-image {
+
                         background-repeat:no-repeat;
                         background-position: center center;
-                        background-size: cover;
+                        background-size: contain;
                     }
-            
+
                     .image-loading-overlay,
                     .no-preview-overlay {
                         position: absolute;
@@ -63,37 +58,24 @@
                         }
 
                         &.no-preview-overlay {
-                            top: 60px; bottom: 25px; left: 0px; right: 0px;
+                            top: 60px; left: 0px; right: 0px;
                             
-                            border-top: 2px solid $primary-var-1;
-                            border-bottom: 2px solid $primary-var-1;
+                            border-top: 3px solid $primary-var-2;
+                            border-bottom: 3px solid $primary-var-2;
                             background-color: $primary;
-                            opacity: 0.8;
+                            opacity: 0.7;
                             
+
+                            -webkit-box-shadow: $box-shadow-sm; 
+                            box-shadow: $box-shadow-sm;
+
                             color: white;
                             font-style: italic;	
                         }
 
                     }
-
-                    .no-preview-overlay {
-                        position: absolute;
-                        top: 60px; bottom: 25px; left: 0px; right: 0px;
-                    
-                        border-top: 2px solid $primary-var-1;
-                        border-bottom: 2px solid $primary-var-1;
-                        background-color: $primary;
-                        opacity: 0.8;
-                        
-                        text-align: center;
-                        vertical-align: middle;
-                        padding: 8px 5px;
-                        color: white;
-                        font-style: italic;	
-                        z-index: 100;
-                    }
                 }
-            
+
                 .search-results-resource-item {
                     .search-result-score {
                         float: right;
