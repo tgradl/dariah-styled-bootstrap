@@ -10,10 +10,16 @@
                 font-style: italic;
             }
 
+            .search-results-resources-show-more {
+                text-align: center;
+            }
+
             .search-results-item {
                 margin: $grid-gutter-width/2 $grid-gutter-width/2 $grid-gutter-width $grid-gutter-width/2;
             
                 .search-result-image-container {
+                    flex: 0 0 145px;
+
                     position: relative;
                     padding: 5px;
                     border: $border-width solid $border-color;
@@ -77,6 +83,8 @@
                 }
 
                 .search-results-resource-item {
+                    justify-content: center;
+
                     .search-result-score {
                         float: right;
                         font-size: 90%;

@@ -3,9 +3,15 @@
     
     li {
         display: block;
+        padding: 0;
         
         &::before {
             display: none;
+        }
+
+        .search-available-collection-doccount {
+            font-weight: bold; 
+            font-size: 125%;
         }
     }
 }
