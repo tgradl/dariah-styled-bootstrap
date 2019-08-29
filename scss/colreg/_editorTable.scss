@@ -11,6 +11,12 @@
     width: 100%;
 
 	.editor-list {
+
+		.editor-list-item {
+			border: 1px solid $primary-var-2;
+			padding: $grid-gutter-width/2;
+		}
+
 		.btn-link {
 			padding-top: $btn-padding-y;
 			padding-bottom: $btn-padding-y;
