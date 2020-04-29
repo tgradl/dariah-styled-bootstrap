@@ -6,9 +6,10 @@ $fa-font-weight-regular:  400;
 
 // Footer
 
-$footer-bg-color:	#f7f7f7 !default;
-$footer-color:		$gray-900 !default;
-$footer-font-size:	$font-size-sm !default;
+$footer-bg-color:	    $white !default;
+$footer-border-color:	$gray-200 !default;
+$footer-color:		    $gray-900 !default;
+$footer-font-size:  	$font-size-sm !default;
 
 $footer-breakpoint:	map-get($grid-breakpoints, "md");
 

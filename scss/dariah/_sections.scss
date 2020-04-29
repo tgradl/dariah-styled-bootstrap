@@ -24,10 +24,11 @@ header {
  *	@see: https://github.com/DARIAH-DE/StyleGuideTemplate/blob/styleguide_v2/scss/sections/footer.scss
  */
 .footer {
-	background: $footer-bg-color url(../img/grain.png);
+	background: $footer-bg-color;
 	color: $footer-color;
 	font-size: $footer-font-size;
 	margin-top: auto;
+	border-top: 1px solid $footer-border-color;
 	padding: ($grid-gutter-width / 2) $grid-gutter-width;
 	/*text-shadow: $outset-shadow;*/
 	z-index: 1021; //over fixed sidebar

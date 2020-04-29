@@ -57,7 +57,7 @@
 			height: ($grid-gutter-width * 2);
 
 			// Paint over logo tagline
-			&::after {
+			/*&::after {
 				background: #fff;
 				bottom: -17px;
 				content: '';
@@ -65,10 +65,10 @@
 				width: 100%;
 				height: 20px;
 				position: absolute;
-			}
+			}*/
 
 			.logobar-title {
-				margin-top: 22px;
+				margin-top: 28px;
 				font-size: 1.15rem;
 				vertical-align: top;
 			}

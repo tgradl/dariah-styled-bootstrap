@@ -6,6 +6,8 @@
 // Color system
 
 $white:    #fff !default;
+$gray-50: #ebedfe !default;
+$gray-75: #c0c7f7 !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #eeeeee !default;
 $gray-300: #dee2e6 !default;
@@ -34,7 +36,9 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #213365 !default;
+$blue:    #404777 !default;
+$lighterblue : #5F648F !default;
+
 $indigo:  #494e7d !default;
 $purple:  #727299 !default;
 $pink:    #e83e8c !default; // Bootstrap default
@@ -67,8 +71,8 @@ $colors: map-merge(
 );
 
 $primary:       $blue !default;
-$primary-var-1: $indigo !default;
-$primary-var-2: $purple !default;
+$primary-var-1: $blue !default;
+$primary-var-2: $lighterblue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -76,6 +80,8 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+
+$linkblue:      #007bff;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -103,7 +109,7 @@ $yiq-contrasted-threshold:  150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900 !default;
-$yiq-text-light:            $white !default;
+$yiq-text-light:            $gray-50 !default;
 
 
 // Alphas
@@ -177,7 +183,7 @@ $body-color:                $gray-800 !default;
 //
 // Style anchor elements.
 
-$link-color:                $primary-var-1 !default;
+$link-color:                $linkblue !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     none !default;
@@ -780,10 +786,10 @@ $navbar-toggler-font-size:          $font-size-sm !default;
 $navbar-toggler-font-family:        $headings-font-family !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
-$navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $white !default;
+$navbar-dark-color:                 $gray-75 !default;
+$navbar-dark-hover-color:           $gray-75 !default;
 $navbar-dark-hover-bg-color:        $shine-06;
-$navbar-dark-active-color:          $white !default;
+$navbar-dark-active-color:          $gray-75 !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-dark-toggler-border-color:  none !default;
