@@ -132,4 +132,27 @@
             background-color: $primary-var-2;
         }
     }
+
+    #item-highlights {
+        font-size: 85%;
+      
+        > div {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+      
+            margin: $grid-gutter-width/4;
+      
+            font-style: italic;
+      
+            span.result-highlight-field {
+                font-style: normal;
+            }
+      
+            span.result-highlight {
+                font-weight: bold;
+                color: $primary;
+            }
+        }
+      }
 }
