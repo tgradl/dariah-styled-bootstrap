@@ -12,7 +12,7 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #707070 !default;
-$gray-700: #495057 !default;
+$gray-700: #454545 !default; // custom
 $gray-800: #333333 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
@@ -34,16 +34,18 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #213365 !default;
-$indigo:  #494e7d !default;
-$purple:  #727299 !default;
-$pink:    #e83e8c !default; // Bootstrap default
-$red:     #652122 !default;
-$orange:  #655321 !default; 
-$yellow:  #ffc107 !default; // Bootstrap default
-$green:   #446521 !default;
-$teal:    #20c997 !default; // Bootstrap default
-$cyan:    #17a2b8 !default; // Bootstrap default
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$red-v2:  #E21A10 !default; // custom (OHD red)
+$red-v3:  #930c05 !default; // custom (darker)
+$orange:  #fd5614 !default; // custom
+$yellow:  #ffa807 !default; // custom
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -66,12 +68,12 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
-$primary-var-1: $indigo !default;
-$primary-var-2: $purple !default;
+$primary:       $black !default;
+$primary-var-1: $red-v3 !default;
+$primary-var-2: $gray-700 !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          $blue !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
